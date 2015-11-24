@@ -33,14 +33,14 @@
             this.participantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.campeonatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.timesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.campeonatosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,13 @@
             this.campeonatosToolStripMenuItem.Name = "campeonatosToolStripMenuItem";
             this.campeonatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.campeonatosToolStripMenuItem.Text = "&Campeonatos";
+            this.campeonatosToolStripMenuItem.Click += new System.EventHandler(this.campeonatosToolStripMenuItem_Click);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.updateToolStripMenuItem.Text = "Update";
             // 
             // consultaToolStripMenuItem
             // 
@@ -117,6 +124,12 @@
             this.campeonatosToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.campeonatosToolStripMenuItem1.Text = "&Campeonatos";
             // 
+            // relatoriosToolStripMenuItem
+            // 
+            this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.relatoriosToolStripMenuItem.Text = "&Relatorios";
+            // 
             // ajudaToolStripMenuItem
             // 
             this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
@@ -129,18 +142,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.updateToolStripMenuItem.Text = "Update";
-            // 
-            // relatoriosToolStripMenuItem
-            // 
-            this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.relatoriosToolStripMenuItem.Text = "&Relatorios";
             // 
             // fmprincipal
             // 

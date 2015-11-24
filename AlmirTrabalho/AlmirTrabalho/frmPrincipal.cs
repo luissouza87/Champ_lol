@@ -40,5 +40,12 @@ namespace AlmirTrabalho
             frmCadasTim.MdiParent = this;
             frmCadasTim.Show();
         }
+
+        private void campeonatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadastroCampeonato frmCadasCamp = new frmCadastroCampeonato();
+            frmCadasCamp.MdiParent = this;
+            frmCadasCamp.Show();
+        }
     }
 }

@@ -9,3 +9,4 @@ C:\Users\kamuiyoshi\Desktop\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.
 C:\Users\kamuiyoshi\Desktop\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.pdb
 C:\Users\kamuiyoshi\Desktop\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastroJogadores.resources
 C:\Users\kamuiyoshi\Desktop\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastrotime.resources
+C:\Users\kamuiyoshi\Desktop\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastroCampeonato.resources

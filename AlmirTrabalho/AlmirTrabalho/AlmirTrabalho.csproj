@@ -57,6 +57,12 @@
     <Compile Include="Camadas\MODEL\campeonato.cs" />
     <Compile Include="Camadas\MODEL\Jogadores.cs" />
     <Compile Include="Camadas\MODEL\time.cs" />
+    <Compile Include="frmCadastroCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastroCampeonato.Designer.cs">
+      <DependentUpon>frmCadastroCampeonato.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastroJogadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Cadastrotime.resx">
       <DependentUpon>Cadastrotime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroCampeonato.resx">
+      <DependentUpon>frmCadastroCampeonato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroJogadores.resx">
       <DependentUpon>frmCadastroJogadores.cs</DependentUpon>

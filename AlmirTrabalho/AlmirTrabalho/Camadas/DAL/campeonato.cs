@@ -49,6 +49,21 @@ namespace AlmirTrabalho.Camadas.DAL // chamando os metodos para deletar , inseri
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("nome", campeonato.nome);
             cmd.Parameters.AddWithValue("cap", campeonato.capacidade);
+            cmd.Parameters.AddWithValue("loc", campeonato.local);
+            cmd.Parameters.AddWithValue("premium", campeonato.premiacao);
+            conexao.Open();
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Inserção");
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
     }
 }
