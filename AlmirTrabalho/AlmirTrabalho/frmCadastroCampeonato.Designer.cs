@@ -34,16 +34,16 @@
             this.lblCap = new System.Windows.Forms.Label();
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblmenos = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtPremiacao = new System.Windows.Forms.TextBox();
+            this.txtLocal = new System.Windows.Forms.TextBox();
+            this.txtCapacidade = new System.Windows.Forms.TextBox();
+            this.dgvCadasCamp = new System.Windows.Forms.DataGridView();
+            this.btcadastar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCadasCamp)).BeginInit();
             this.SuspendLayout();
             // 
             // lblid
@@ -106,50 +106,52 @@
             this.lblmenos.TabIndex = 5;
             this.lblmenos.Text = "-1";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(344, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtNome.Location = new System.Drawing.Point(145, 55);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(344, 20);
+            this.txtNome.TabIndex = 6;
             // 
-            // textBox2
+            // txtPremiacao
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtPremiacao.Location = new System.Drawing.Point(145, 172);
+            this.txtPremiacao.Name = "txtPremiacao";
+            this.txtPremiacao.Size = new System.Drawing.Size(344, 20);
+            this.txtPremiacao.TabIndex = 7;
             // 
-            // textBox3
+            // txtLocal
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(344, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtLocal.Location = new System.Drawing.Point(145, 133);
+            this.txtLocal.Name = "txtLocal";
+            this.txtLocal.Size = new System.Drawing.Size(344, 20);
+            this.txtLocal.TabIndex = 8;
             // 
-            // textBox4
+            // txtCapacidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(145, 92);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(344, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtCapacidade.Location = new System.Drawing.Point(145, 92);
+            this.txtCapacidade.Name = "txtCapacidade";
+            this.txtCapacidade.Size = new System.Drawing.Size(344, 20);
+            this.txtCapacidade.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgvCadasCamp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(38, 240);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(451, 153);
-            this.dataGridView1.TabIndex = 10;
+            this.dgvCadasCamp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCadasCamp.Location = new System.Drawing.Point(38, 240);
+            this.dgvCadasCamp.Name = "dgvCadasCamp";
+            this.dgvCadasCamp.Size = new System.Drawing.Size(617, 153);
+            this.dgvCadasCamp.TabIndex = 10;
             // 
-            // button1
+            // btcadastar
             // 
-            this.button1.Location = new System.Drawing.Point(54, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(61, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btcadastar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btcadastar.Location = new System.Drawing.Point(38, 207);
+            this.btcadastar.Name = "btcadastar";
+            this.btcadastar.Size = new System.Drawing.Size(85, 23);
+            this.btcadastar.TabIndex = 11;
+            this.btcadastar.Text = "Cadastro";
+            this.btcadastar.UseVisualStyleBackColor = true;
+            this.btcadastar.Click += new System.EventHandler(this.btcadastar_Click);
             // 
             // button2
             // 
@@ -182,16 +184,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 405);
+            this.ClientSize = new System.Drawing.Size(667, 405);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btcadastar);
+            this.Controls.Add(this.dgvCadasCamp);
+            this.Controls.Add(this.txtCapacidade);
+            this.Controls.Add(this.txtLocal);
+            this.Controls.Add(this.txtPremiacao);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblmenos);
             this.Controls.Add(this.lblLocal);
             this.Controls.Add(this.lblCap);
@@ -200,7 +202,8 @@
             this.Controls.Add(this.lblid);
             this.Name = "frmCadastroCampeonato";
             this.Text = "frmCadastroCampeonato";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmCadastroCampeonato_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCadasCamp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,12 +217,12 @@
         private System.Windows.Forms.Label lblCap;
         private System.Windows.Forms.Label lblLocal;
         private System.Windows.Forms.Label lblmenos;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtPremiacao;
+        private System.Windows.Forms.TextBox txtLocal;
+        private System.Windows.Forms.TextBox txtCapacidade;
+        private System.Windows.Forms.DataGridView dgvCadasCamp;
+        private System.Windows.Forms.Button btcadastar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

@@ -16,7 +16,7 @@ namespace AlmirTrabalho.Camadas.DAL // chamando os metodos para deletar , inseri
         {
             List<MODEL.campeonato> listaCamp = new List<MODEL.campeonato>();
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Select * from campeonato;";
+            string sql = "Select * from CAMPEONATO;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             conexao.Open();
             try
@@ -43,14 +43,14 @@ namespace AlmirTrabalho.Camadas.DAL // chamando os metodos para deletar , inseri
             }
             return listaCamp;
         }
-        public void Insert(MODEL.campeonato campeonato) {
+        public void Insert(MODEL.campeonato Campeonato) {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Insert into campeonato values (@nome, @cap , @ loc , @ premium)";
+            string sql = "Insert into CAMPEONATO values (@nome, @cap , @loc , @premium)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("nome", campeonato.nome);
-            cmd.Parameters.AddWithValue("cap", campeonato.capacidade);
-            cmd.Parameters.AddWithValue("loc", campeonato.local);
-            cmd.Parameters.AddWithValue("premium", campeonato.premiacao);
+            cmd.Parameters.AddWithValue("nome", Campeonato.nome);
+            cmd.Parameters.AddWithValue("cap", Campeonato.capacidade);
+            cmd.Parameters.AddWithValue("loc", Campeonato.local);
+            cmd.Parameters.AddWithValue("premium", Campeonato.premiacao);
             conexao.Open();
             try
             {
