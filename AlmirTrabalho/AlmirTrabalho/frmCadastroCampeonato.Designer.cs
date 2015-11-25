@@ -40,9 +40,10 @@
             this.txtCapacidade = new System.Windows.Forms.TextBox();
             this.dgvCadasCamp = new System.Windows.Forms.DataGridView();
             this.btcadastar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btUpdate = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
+            this.btSair = new System.Windows.Forms.Button();
+            this.txtIdUp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadasCamp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,11 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(60, 48);
+            this.lblNome.Location = new System.Drawing.Point(2, 48);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(79, 27);
+            this.lblNome.Size = new System.Drawing.Size(137, 27);
             this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome :";
+            this.lblNome.Text = "Campeonato :";
             // 
             // lblPrem
             // 
@@ -100,7 +101,7 @@
             // 
             this.lblmenos.AutoSize = true;
             this.lblmenos.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmenos.Location = new System.Drawing.Point(145, 9);
+            this.lblmenos.Location = new System.Drawing.Point(140, 9);
             this.lblmenos.Name = "lblmenos";
             this.lblmenos.Size = new System.Drawing.Size(36, 27);
             this.lblmenos.TabIndex = 5;
@@ -110,84 +111,98 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(145, 55);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(344, 20);
+            this.txtNome.Size = new System.Drawing.Size(475, 20);
             this.txtNome.TabIndex = 6;
             // 
             // txtPremiacao
             // 
             this.txtPremiacao.Location = new System.Drawing.Point(145, 172);
             this.txtPremiacao.Name = "txtPremiacao";
-            this.txtPremiacao.Size = new System.Drawing.Size(344, 20);
+            this.txtPremiacao.Size = new System.Drawing.Size(475, 20);
             this.txtPremiacao.TabIndex = 7;
             // 
             // txtLocal
             // 
             this.txtLocal.Location = new System.Drawing.Point(145, 133);
             this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(344, 20);
+            this.txtLocal.Size = new System.Drawing.Size(475, 20);
             this.txtLocal.TabIndex = 8;
             // 
             // txtCapacidade
             // 
             this.txtCapacidade.Location = new System.Drawing.Point(145, 92);
             this.txtCapacidade.Name = "txtCapacidade";
-            this.txtCapacidade.Size = new System.Drawing.Size(344, 20);
+            this.txtCapacidade.Size = new System.Drawing.Size(475, 20);
             this.txtCapacidade.TabIndex = 9;
             // 
             // dgvCadasCamp
             // 
             this.dgvCadasCamp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCadasCamp.Location = new System.Drawing.Point(38, 240);
+            this.dgvCadasCamp.Location = new System.Drawing.Point(46, 236);
             this.dgvCadasCamp.Name = "dgvCadasCamp";
-            this.dgvCadasCamp.Size = new System.Drawing.Size(617, 153);
+            this.dgvCadasCamp.Size = new System.Drawing.Size(545, 153);
             this.dgvCadasCamp.TabIndex = 10;
             // 
             // btcadastar
             // 
             this.btcadastar.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btcadastar.Location = new System.Drawing.Point(38, 207);
+            this.btcadastar.Location = new System.Drawing.Point(14, 207);
             this.btcadastar.Name = "btcadastar";
-            this.btcadastar.Size = new System.Drawing.Size(85, 23);
+            this.btcadastar.Size = new System.Drawing.Size(108, 23);
             this.btcadastar.TabIndex = 11;
             this.btcadastar.Text = "Cadastro";
             this.btcadastar.UseVisualStyleBackColor = true;
             this.btcadastar.Click += new System.EventHandler(this.btcadastar_Click);
             // 
-            // button2
+            // btUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(175, 207);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(61, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btUpdate.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Location = new System.Drawing.Point(180, 207);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(108, 23);
+            this.btUpdate.TabIndex = 12;
+            this.btUpdate.Text = "Update";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
-            // button3
+            // btDelete
             // 
-            this.button3.Location = new System.Drawing.Point(267, 207);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btDelete.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDelete.Location = new System.Drawing.Point(346, 207);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(108, 23);
+            this.btDelete.TabIndex = 13;
+            this.btDelete.Text = "Deletar";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
-            // button4
+            // btSair
             // 
-            this.button4.Location = new System.Drawing.Point(394, 207);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btSair.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSair.Location = new System.Drawing.Point(512, 207);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(108, 23);
+            this.btSair.TabIndex = 14;
+            this.btSair.Text = "Sair";
+            this.btSair.UseVisualStyleBackColor = true;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
+            // 
+            // txtIdUp
+            // 
+            this.txtIdUp.Location = new System.Drawing.Point(188, 15);
+            this.txtIdUp.Name = "txtIdUp";
+            this.txtIdUp.Size = new System.Drawing.Size(34, 20);
+            this.txtIdUp.TabIndex = 15;
             // 
             // frmCadastroCampeonato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 405);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(633, 405);
+            this.Controls.Add(this.txtIdUp);
+            this.Controls.Add(this.btSair);
+            this.Controls.Add(this.btDelete);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.btcadastar);
             this.Controls.Add(this.dgvCadasCamp);
             this.Controls.Add(this.txtCapacidade);
@@ -201,7 +216,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.lblid);
             this.Name = "frmCadastroCampeonato";
-            this.Text = "frmCadastroCampeonato";
+            this.Text = "Cadastro do Campeonato";
             this.Load += new System.EventHandler(this.frmCadastroCampeonato_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadasCamp)).EndInit();
             this.ResumeLayout(false);
@@ -223,8 +238,9 @@
         private System.Windows.Forms.TextBox txtCapacidade;
         private System.Windows.Forms.DataGridView dgvCadasCamp;
         private System.Windows.Forms.Button btcadastar;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.Button btSair;
+        private System.Windows.Forms.TextBox txtIdUp;
     }
 }

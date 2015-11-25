@@ -38,5 +38,36 @@ namespace AlmirTrabalho
             dgvCadasCamp.DataSource = dalCamp.Select();
 
         }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            Camadas.MODEL.campeonato Campeonato = new Camadas.MODEL.campeonato();
+            Camadas.DAL.campeonato dalCamp = new Camadas.DAL.campeonato();
+            Campeonato.id = Convert.ToInt32(txtIdUp.Text);
+            Campeonato.local = txtLocal.Text;
+            Campeonato.nome = txtNome.Text;
+            Campeonato.premiacao = txtPremiacao.Text;
+            Campeonato.capacidade = Convert.ToInt32(txtCapacidade.Text);
+
+            dalCamp.Update(Campeonato);//inseri as informacoes digitadas no banco
+            dgvCadasCamp.DataSource = dalCamp.Select();//mostrar banco 
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            Camadas.MODEL.campeonato Campeonato = new Camadas.MODEL.campeonato();
+            Camadas.DAL.campeonato dalCamp = new Camadas.DAL.campeonato();
+            Campeonato.id = Convert.ToInt32(txtIdUp.Text);
+            
+
+            dalCamp.Delete(Campeonato);
+            dgvCadasCamp.DataSource = dalCamp.Select();//mostrar banco 
+
+        }
+
+        private void btSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -52,6 +52,7 @@
     <Compile Include="Cadastrotime.Designer.cs">
       <DependentUpon>Cadastrotime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Camadas\BLL\campeonato.cs" />
     <Compile Include="Camadas\DAL\campeonato.cs" />
     <Compile Include="Camadas\DAL\Conexao.cs" />
     <Compile Include="Camadas\MODEL\campeonato.cs" />
@@ -111,9 +112,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Camadas\BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
