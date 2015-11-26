@@ -22,3 +22,4 @@ D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadas
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.fmprincipal.resources
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.Properties.Resources.resources
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.csproj.GenerateResource.Cache
+D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmConsultaJogador.resources

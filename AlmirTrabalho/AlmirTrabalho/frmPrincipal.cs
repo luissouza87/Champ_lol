@@ -47,5 +47,12 @@ namespace AlmirTrabalho
             frmCadasCamp.MdiParent = this;
             frmCadasCamp.Show();
         }
+
+        private void timesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaJogador frmConsulJogador = new frmConsultaJogador();
+            frmConsulJogador.MdiParent = this;
+            frmConsulJogador.Show();
+        }
     }
 }

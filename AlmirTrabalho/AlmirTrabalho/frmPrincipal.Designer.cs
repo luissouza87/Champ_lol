@@ -103,6 +103,7 @@
             this.timesToolStripMenuItem1.Name = "timesToolStripMenuItem1";
             this.timesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.timesToolStripMenuItem1.Text = "&Jogadores";
+            this.timesToolStripMenuItem1.Click += new System.EventHandler(this.timesToolStripMenuItem1_Click);
             // 
             // timesToolStripMenuItem2
             // 
