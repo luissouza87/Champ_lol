@@ -16,7 +16,7 @@ namespace AlmirTrabalho.Camadas.DAL
         {
             List<MODEL.time> listaTime = new List<MODEL.time>();
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Select * from TIME;";
+            string sql = "Select * from time;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             conexao.Open();
             try
@@ -43,14 +43,14 @@ namespace AlmirTrabalho.Camadas.DAL
             }
             return listaTime;
         }
-        public void Insert(MODEL.time Time)
-        {//criação do insert no banco
+
+        public void Insert(MODEL.time Time){//criação do insert no banco
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Insert into TIME values (@nome, @criador , @pais , @qtjogadores)";
+            string sql = "Insert into time values (@name , @fundador , @country, @qtjogadores)";
             SqlCommand cmd = new SqlCommand(sql, conexao);
-            cmd.Parameters.AddWithValue("nome", Time.nome);
-            cmd.Parameters.AddWithValue("criador", Time.criador);
-            cmd.Parameters.AddWithValue("pais", Time.pais);
+            cmd.Parameters.AddWithValue("name", Time.nome);
+            cmd.Parameters.AddWithValue("fundador", Time.criador);
+            cmd.Parameters.AddWithValue("country", Time.pais);
             cmd.Parameters.AddWithValue("qtjogadores", Time.qt_jogadores);
             conexao.Open();
             try
@@ -69,7 +69,7 @@ namespace AlmirTrabalho.Camadas.DAL
         public void Update(MODEL.time Time)//função update
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update TIME set nome=@nome,criador=@criador , pais=@pais , qt_jogadores=@qtjogadores";
+            string sql = "Update TIMES set nome=@nome,criador=@criador , pais=@pais , qt_jogadores=@qtjogadores";
             sql += " where cod=@id";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", Time.id);
@@ -94,7 +94,7 @@ namespace AlmirTrabalho.Camadas.DAL
         public void Delete(MODEL.time Time)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "delete from TIME where cod=@id;";
+            string sql = "delete from TIMES where cod=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("id", Time.id);
             conexao.Open();

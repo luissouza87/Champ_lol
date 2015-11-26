@@ -51,7 +51,7 @@
             // 
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(87, 9);
+            this.lblid.Location = new System.Drawing.Point(138, 12);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(52, 27);
             this.lblid.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(2, 48);
+            this.lblNome.Location = new System.Drawing.Point(53, 51);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(137, 27);
             this.lblNome.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.lblPrem.AutoSize = true;
             this.lblPrem.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrem.Location = new System.Drawing.Point(19, 165);
+            this.lblPrem.Location = new System.Drawing.Point(70, 168);
             this.lblPrem.Name = "lblPrem";
             this.lblPrem.Size = new System.Drawing.Size(120, 27);
             this.lblPrem.TabIndex = 2;
@@ -81,17 +81,17 @@
             // 
             this.lblCap.AutoSize = true;
             this.lblCap.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCap.Location = new System.Drawing.Point(8, 87);
+            this.lblCap.Location = new System.Drawing.Point(-3, 88);
             this.lblCap.Name = "lblCap";
-            this.lblCap.Size = new System.Drawing.Size(131, 27);
+            this.lblCap.Size = new System.Drawing.Size(193, 27);
             this.lblCap.TabIndex = 3;
-            this.lblCap.Text = "Capacidade :";
+            this.lblCap.Text = "Quant Max. Times:";
             // 
             // lblLocal
             // 
             this.lblLocal.AutoSize = true;
             this.lblLocal.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.Location = new System.Drawing.Point(65, 126);
+            this.lblLocal.Location = new System.Drawing.Point(116, 129);
             this.lblLocal.Name = "lblLocal";
             this.lblLocal.Size = new System.Drawing.Size(74, 27);
             this.lblLocal.TabIndex = 4;
@@ -101,7 +101,7 @@
             // 
             this.lblmenos.AutoSize = true;
             this.lblmenos.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmenos.Location = new System.Drawing.Point(140, 9);
+            this.lblmenos.Location = new System.Drawing.Point(183, 9);
             this.lblmenos.Name = "lblmenos";
             this.lblmenos.Size = new System.Drawing.Size(36, 27);
             this.lblmenos.TabIndex = 5;
@@ -109,30 +109,30 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(145, 55);
+            this.txtNome.Location = new System.Drawing.Point(196, 55);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(475, 20);
+            this.txtNome.Size = new System.Drawing.Size(424, 20);
             this.txtNome.TabIndex = 6;
             // 
             // txtPremiacao
             // 
-            this.txtPremiacao.Location = new System.Drawing.Point(145, 172);
+            this.txtPremiacao.Location = new System.Drawing.Point(196, 172);
             this.txtPremiacao.Name = "txtPremiacao";
-            this.txtPremiacao.Size = new System.Drawing.Size(475, 20);
+            this.txtPremiacao.Size = new System.Drawing.Size(424, 20);
             this.txtPremiacao.TabIndex = 7;
             // 
             // txtLocal
             // 
-            this.txtLocal.Location = new System.Drawing.Point(145, 133);
+            this.txtLocal.Location = new System.Drawing.Point(196, 133);
             this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(475, 20);
+            this.txtLocal.Size = new System.Drawing.Size(424, 20);
             this.txtLocal.TabIndex = 8;
             // 
             // txtCapacidade
             // 
-            this.txtCapacidade.Location = new System.Drawing.Point(145, 92);
+            this.txtCapacidade.Location = new System.Drawing.Point(196, 92);
             this.txtCapacidade.Name = "txtCapacidade";
-            this.txtCapacidade.Size = new System.Drawing.Size(475, 20);
+            this.txtCapacidade.Size = new System.Drawing.Size(424, 20);
             this.txtCapacidade.TabIndex = 9;
             // 
             // dgvCadasCamp
@@ -189,7 +189,7 @@
             // 
             // txtIdUp
             // 
-            this.txtIdUp.Location = new System.Drawing.Point(188, 15);
+            this.txtIdUp.Location = new System.Drawing.Point(226, 12);
             this.txtIdUp.Name = "txtIdUp";
             this.txtIdUp.Size = new System.Drawing.Size(34, 20);
             this.txtIdUp.TabIndex = 15;

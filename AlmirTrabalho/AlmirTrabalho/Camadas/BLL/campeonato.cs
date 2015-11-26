@@ -17,23 +17,23 @@ namespace AlmirTrabalho.Camadas.BLL
 
         public void Insert(MODEL.campeonato Campeonato)
         {
-            DAL.campeonato dalProd = new DAL.campeonato();
+            DAL.campeonato dalcamp = new DAL.campeonato();
             //regras de negocio
-            dalProd.Insert(Campeonato);
+            dalcamp.Insert(Campeonato);
         }
 
         public void Update(MODEL.campeonato Campeonato)
         {
-            DAL.campeonato dalProd = new DAL.campeonato();
+            DAL.campeonato dalcamp = new DAL.campeonato();
             //regras de negócio
-            dalProd.Update(Campeonato);
+            dalcamp.Update(Campeonato);
         }
 
         public void Delete(MODEL.campeonato Campeonato)
         {
-            DAL.campeonato dalProd = new DAL.campeonato();
+            DAL.campeonato dalcamp = new DAL.campeonato();
             // regras de negócio
-            dalProd.Delete(Campeonato);
+            dalcamp.Delete(Campeonato);
         }
     }
 }

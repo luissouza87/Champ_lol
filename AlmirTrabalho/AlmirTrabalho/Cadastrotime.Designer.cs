@@ -33,12 +33,14 @@
             this.lblCriador = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblidmais = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtCriador = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.dgvCadasTimes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCadasTimes)).BeginInit();
             this.SuspendLayout();
             // 
             // lblid
@@ -91,26 +93,26 @@
             this.lblidmais.TabIndex = 4;
             this.lblidmais.Text = "-1";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(106, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtNome.Location = new System.Drawing.Point(106, 59);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(282, 20);
+            this.txtNome.TabIndex = 5;
             // 
-            // textBox2
+            // txtPais
             // 
-            this.textBox2.Location = new System.Drawing.Point(106, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(282, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtPais.Location = new System.Drawing.Point(106, 117);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(282, 20);
+            this.txtPais.TabIndex = 6;
             // 
-            // textBox3
+            // txtCriador
             // 
-            this.textBox3.Location = new System.Drawing.Point(106, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(282, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtCriador.Location = new System.Drawing.Point(106, 88);
+            this.txtCriador.Name = "txtCriador";
+            this.txtCriador.Size = new System.Drawing.Size(282, 20);
+            this.txtCriador.TabIndex = 7;
             // 
             // button1
             // 
@@ -121,6 +123,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "&Incluir";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -141,18 +144,28 @@
             this.button3.TabIndex = 10;
             this.button3.Text = "&Sair";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dgvCadasTimes
+            // 
+            this.dgvCadasTimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCadasTimes.Location = new System.Drawing.Point(12, 205);
+            this.dgvCadasTimes.Name = "dgvCadasTimes";
+            this.dgvCadasTimes.Size = new System.Drawing.Size(381, 117);
+            this.dgvCadasTimes.TabIndex = 11;
             // 
             // frmCadastrotime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 334);
+            this.Controls.Add(this.dgvCadasTimes);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCriador);
+            this.Controls.Add(this.txtPais);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblidmais);
             this.Controls.Add(this.lblPais);
             this.Controls.Add(this.lblCriador);
@@ -160,6 +173,8 @@
             this.Controls.Add(this.lblid);
             this.Name = "frmCadastrotime";
             this.Text = "Cadastrar Time";
+            this.Load += new System.EventHandler(this.frmCadastrotime_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCadasTimes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,11 +187,12 @@
         private System.Windows.Forms.Label lblCriador;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblidmais;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.TextBox txtCriador;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dgvCadasTimes;
     }
 }
