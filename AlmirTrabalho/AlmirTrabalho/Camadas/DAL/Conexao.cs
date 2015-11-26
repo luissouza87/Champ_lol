@@ -10,7 +10,7 @@ namespace AlmirTrabalho.Camadas.DAL
     {
         public static string getConexao()//criando conexao com o banco de dados
         {
-            return @"Data Source=DESKTOP-RC91DCS;Initial Catalog=ESTOQUEBCC;Integrated Security=True";
+            return @"Data Source=.\SQLEXPRESS;Initial Catalog=CAMPEONATO;Integrated Security=True";
         }
     }
 }

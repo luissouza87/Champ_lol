@@ -54,8 +54,12 @@
       <DependentUpon>Cadastrotime.cs</DependentUpon>
     </Compile>
     <Compile Include="Camadas\BLL\campeonato.cs" />
+    <Compile Include="Camadas\BLL\jogador.cs" />
+    <Compile Include="Camadas\BLL\Time.cs" />
     <Compile Include="Camadas\DAL\campeonato.cs" />
     <Compile Include="Camadas\DAL\Conexao.cs" />
+    <Compile Include="Camadas\DAL\Jogador.cs" />
+    <Compile Include="Camadas\DAL\Time.cs" />
     <Compile Include="Camadas\MODEL\campeonato.cs" />
     <Compile Include="Camadas\MODEL\Jogadores.cs" />
     <Compile Include="Camadas\MODEL\time.cs" />
