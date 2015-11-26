@@ -32,18 +32,28 @@ namespace AlmirTrabalho
             habilitaCampos(false);
             lblTime.Visible = false;
             cbbTime.Visible = false;
+            lblCodT.Visible = false;
+            txbCodT.Visible = false;
+
+            Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
+            dgvJogadores.DataSource = dalJogador.Select();
+
         }
 
         private void rdbSemTime_CheckedChanged(object sender, EventArgs e)
         {
             lblTime.Visible = false;
             cbbTime.Visible = false;
+            lblCodT.Visible = false;
+            txbCodT.Visible = false;
         }
 
         private void rdbComTime_CheckedChanged(object sender, EventArgs e)
         {
             lblTime.Visible = true;
             cbbTime.Visible = true;
+            lblCodT.Visible = true;
+            txbCodT.Visible = true;
 
         }
 
@@ -69,6 +79,30 @@ namespace AlmirTrabalho
             rdbComTime.Checked = false;
             lblTime.Visible = false;
             cbbTime.Visible = false;
+            lblCodT.Visible = false;
+            txbCodT.Visible = false;
+        }
+
+        private void btnInserir_Click(object sender, EventArgs e)
+        {
+            Camadas.MODEL.Jogadores Jogador = new Camadas.MODEL.Jogadores();
+            Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
+            Jogador.id = Convert.ToInt32(lblId.Text);
+            Jogador.nome = txbNome.Text;
+            Jogador.idade = Convert.ToInt32(txbIdade.Text);
+            Jogador.nickname = txbNick.Text;
+            if (rdbSemTime.Checked == true)
+            {
+                Jogador.idTime = Convert.ToInt32(1);
+            }
+            else
+            {
+                Jogador.idTime = Convert.ToInt32(txbCodT.Text);
+            }
+
+            dalJogador.Insert(Jogador);
+            dgvJogadores.DataSource = dalJogador.Select();
+
         }
     }
 }
