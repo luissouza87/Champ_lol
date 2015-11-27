@@ -136,5 +136,38 @@ namespace AlmirTrabalho
             txbCodT.Text = cbbTime.SelectedValue.ToString();
             recuperavalorTime();
         }
+
+        private void btUpdate_Click(object sender, EventArgs e)
+        {
+            Camadas.MODEL.Jogadores Jogador = new Camadas.MODEL.Jogadores();
+            Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
+            Jogador.id = Convert.ToInt32(txtid.Text);
+            Jogador.nome = txbNome.Text;
+            Jogador.idade = Convert.ToInt32(txbIdade.Text);
+            Jogador.nickname = txbNick.Text;
+            if (rdbSemTime.Checked == true)
+            {
+                Jogador.idTime = Convert.ToInt32(1);
+            }
+            else
+            {
+                Jogador.idTime = Convert.ToInt32(txbCodT.Text);
+            }
+
+            dalJogador.Update(Jogador);//inseri as informacoes digitadas no banco
+            dgvJogadores.DataSource = dalJogador.Select();//mostrar banco 
+        }
+
+        private void btDeletar_Click(object sender, EventArgs e)
+        {
+            Camadas.MODEL.Jogadores Jogadores = new Camadas.MODEL.Jogadores();
+            Camadas.DAL.Jogador daljogador = new Camadas.DAL.Jogador();
+            Jogadores.id = Convert.ToInt32(txtid.Text);
+
+
+            daljogador.Delete(Jogadores);
+            dgvJogadores.DataSource = daljogador.Select();//mostrar banco 
+
+        }
     }
 }

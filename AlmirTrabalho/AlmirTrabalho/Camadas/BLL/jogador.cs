@@ -15,6 +15,13 @@ namespace AlmirTrabalho.Camadas.BLL
             return dalJogador.Select();
         }
 
+        public List<MODEL.Jogadores> SelectPorNome(string nome)
+        {
+            DAL.Jogador dalJogador = new DAL.Jogador();
+            // escrever regras de negócios
+            return dalJogador.SelectPorNome(nome);
+        }
+
         public void Insert(MODEL.Jogadores Jogador)
         {
             DAL.Jogador dalJogador = new DAL.Jogador();

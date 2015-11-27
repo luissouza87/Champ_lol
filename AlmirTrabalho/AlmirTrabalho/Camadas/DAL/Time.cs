@@ -29,7 +29,7 @@ namespace AlmirTrabalho.Camadas.DAL
                     Time.nome = (reader["nome"].ToString());
                     Time.criador = (reader["criador"].ToString());
                     Time.pais = (reader["pais"].ToString());
-                    Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
+                    //Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
                     listaTime.Add(Time);
                 }
             }

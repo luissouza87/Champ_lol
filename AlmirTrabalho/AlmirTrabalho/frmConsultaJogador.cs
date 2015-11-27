@@ -12,11 +12,15 @@ namespace AlmirTrabalho
 {
     public partial class frmConsultaJogador : Form
     {
+        Camadas.BLL.jogador bllJogador = new Camadas.BLL.jogador();
+        List<Camadas.MODEL.Jogadores> listaJogadores = new List<Camadas.MODEL.Jogadores>();
 
         public frmConsultaJogador()
         {
             InitializeComponent();
         }
+
+        
         private void setVisible(bool status, string nN)
         {
             lblPesquisa.Visible = status;
@@ -33,16 +37,14 @@ namespace AlmirTrabalho
         private void frmConsultaJogador_Load(object sender, EventArgs e)
         {
             setVisible(false, "");
-
             rdbTodos.Checked = true;
-
-            Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
-            dgvConsulJogador.DataSource = dalJogador.Select();
         }
 
         private void rdbTodos_CheckedChanged(object sender, EventArgs e)
         {
             setVisible(false, "");
+            listaJogadores = bllJogador.Select();
+            dgvConsulJogador.DataSource = listaJogadores;
         }
 
         private void rdbNome_CheckedChanged(object sender, EventArgs e)
@@ -58,7 +60,9 @@ namespace AlmirTrabalho
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-           
+            if (rdbNome.Checked)
+                listaJogadores = bllJogador.SelectPorNome(txbPesquisa.Text);
+                dgvConsulJogador.DataSource = listaJogadores;
         }
     }
 }

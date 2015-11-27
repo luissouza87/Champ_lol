@@ -48,6 +48,9 @@
             this.lblCodT = new System.Windows.Forms.Label();
             this.txbCodT = new System.Windows.Forms.TextBox();
             this.dgvJogadores = new System.Windows.Forms.DataGridView();
+            this.btUpdate = new System.Windows.Forms.Button();
+            this.btDeletar = new System.Windows.Forms.Button();
+            this.txtid = new System.Windows.Forms.TextBox();
             this.gpbTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJogadores)).BeginInit();
             this.SuspendLayout();
@@ -163,7 +166,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblTime.Location = new System.Drawing.Point(161, 152);
+            this.lblTime.Location = new System.Drawing.Point(172, 156);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(168, 27);
             this.lblTime.TabIndex = 9;
@@ -172,7 +175,7 @@
             // cbbTime
             // 
             this.cbbTime.FormattingEnabled = true;
-            this.cbbTime.Location = new System.Drawing.Point(166, 182);
+            this.cbbTime.Location = new System.Drawing.Point(360, 163);
             this.cbbTime.Name = "cbbTime";
             this.cbbTime.Size = new System.Drawing.Size(163, 21);
             this.cbbTime.TabIndex = 10;
@@ -182,27 +185,27 @@
             // 
             this.txbNome.Location = new System.Drawing.Point(166, 75);
             this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(163, 20);
+            this.txbNome.Size = new System.Drawing.Size(357, 20);
             this.txbNome.TabIndex = 11;
             // 
             // txbIdade
             // 
             this.txbIdade.Location = new System.Drawing.Point(166, 101);
             this.txbIdade.Name = "txbIdade";
-            this.txbIdade.Size = new System.Drawing.Size(163, 20);
+            this.txbIdade.Size = new System.Drawing.Size(357, 20);
             this.txbIdade.TabIndex = 12;
             // 
             // txbNick
             // 
             this.txbNick.Location = new System.Drawing.Point(166, 127);
             this.txbNick.Name = "txbNick";
-            this.txbNick.Size = new System.Drawing.Size(163, 20);
+            this.txbNick.Size = new System.Drawing.Size(357, 20);
             this.txbNick.TabIndex = 13;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnCancelar.Location = new System.Drawing.Point(230, 261);
+            this.btnCancelar.Location = new System.Drawing.Point(438, 261);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(97, 27);
             this.btnCancelar.TabIndex = 14;
@@ -224,7 +227,7 @@
             // 
             this.lblCodT.AutoSize = true;
             this.lblCodT.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblCodT.Location = new System.Drawing.Point(161, 214);
+            this.lblCodT.Location = new System.Drawing.Point(203, 200);
             this.lblCodT.Name = "lblCodT";
             this.lblCodT.Size = new System.Drawing.Size(105, 27);
             this.lblCodT.TabIndex = 16;
@@ -233,7 +236,7 @@
             // txbCodT
             // 
             this.txbCodT.Enabled = false;
-            this.txbCodT.Location = new System.Drawing.Point(272, 221);
+            this.txbCodT.Location = new System.Drawing.Point(333, 207);
             this.txbCodT.Name = "txbCodT";
             this.txbCodT.Size = new System.Drawing.Size(57, 20);
             this.txbCodT.TabIndex = 17;
@@ -243,15 +246,47 @@
             this.dgvJogadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvJogadores.Location = new System.Drawing.Point(24, 294);
             this.dgvJogadores.Name = "dgvJogadores";
-            this.dgvJogadores.Size = new System.Drawing.Size(303, 163);
+            this.dgvJogadores.Size = new System.Drawing.Size(511, 163);
             this.dgvJogadores.TabIndex = 18;
+            // 
+            // btUpdate
+            // 
+            this.btUpdate.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUpdate.Location = new System.Drawing.Point(230, 261);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(97, 27);
+            this.btUpdate.TabIndex = 19;
+            this.btUpdate.Text = "&Update";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
+            // btDeletar
+            // 
+            this.btDeletar.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDeletar.Location = new System.Drawing.Point(333, 261);
+            this.btDeletar.Name = "btDeletar";
+            this.btDeletar.Size = new System.Drawing.Size(97, 27);
+            this.btDeletar.TabIndex = 20;
+            this.btDeletar.Text = "Deletar";
+            this.btDeletar.UseVisualStyleBackColor = true;
+            this.btDeletar.Click += new System.EventHandler(this.btDeletar_Click);
+            // 
+            // txtid
+            // 
+            this.txtid.Location = new System.Drawing.Point(204, 47);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(36, 20);
+            this.txtid.TabIndex = 21;
             // 
             // frmCadastroJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 504);
+            this.ClientSize = new System.Drawing.Size(547, 504);
             this.ControlBox = false;
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.btDeletar);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.dgvJogadores);
             this.Controls.Add(this.txbCodT);
             this.Controls.Add(this.lblCodT);
@@ -303,5 +338,8 @@
         private System.Windows.Forms.Label lblCodT;
         private System.Windows.Forms.TextBox txbCodT;
         private System.Windows.Forms.DataGridView dgvJogadores;
+        private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.Button btDeletar;
+        private System.Windows.Forms.TextBox txtid;
     }
 }
