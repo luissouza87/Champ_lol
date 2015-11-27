@@ -105,28 +105,28 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(196, 49);
+            this.txtNome.Location = new System.Drawing.Point(190, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(424, 20);
             this.txtNome.TabIndex = 6;
             // 
             // txtPremiacao
             // 
-            this.txtPremiacao.Location = new System.Drawing.Point(196, 160);
+            this.txtPremiacao.Location = new System.Drawing.Point(190, 160);
             this.txtPremiacao.Name = "txtPremiacao";
             this.txtPremiacao.Size = new System.Drawing.Size(424, 20);
             this.txtPremiacao.TabIndex = 7;
             // 
             // txtLocal
             // 
-            this.txtLocal.Location = new System.Drawing.Point(196, 123);
+            this.txtLocal.Location = new System.Drawing.Point(190, 123);
             this.txtLocal.Name = "txtLocal";
             this.txtLocal.Size = new System.Drawing.Size(424, 20);
             this.txtLocal.TabIndex = 8;
             // 
             // txtCapacidade
             // 
-            this.txtCapacidade.Location = new System.Drawing.Point(196, 86);
+            this.txtCapacidade.Location = new System.Drawing.Point(190, 86);
             this.txtCapacidade.Name = "txtCapacidade";
             this.txtCapacidade.Size = new System.Drawing.Size(424, 20);
             this.txtCapacidade.TabIndex = 9;
@@ -138,6 +138,7 @@
             this.dgvCadasCamp.Name = "dgvCadasCamp";
             this.dgvCadasCamp.Size = new System.Drawing.Size(545, 106);
             this.dgvCadasCamp.TabIndex = 10;
+            this.dgvCadasCamp.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgvCadasCamp_MouseDoubleClick);
             // 
             // btcadastar
             // 
@@ -185,7 +186,7 @@
             // 
             // txtIdUp
             // 
-            this.txtIdUp.Location = new System.Drawing.Point(196, 12);
+            this.txtIdUp.Location = new System.Drawing.Point(190, 12);
             this.txtIdUp.Name = "txtIdUp";
             this.txtIdUp.Size = new System.Drawing.Size(34, 20);
             this.txtIdUp.TabIndex = 15;
@@ -261,7 +262,7 @@
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblInfo.ForeColor = System.Drawing.Color.Red;
-            this.lblInfo.Location = new System.Drawing.Point(236, 5);
+            this.lblInfo.Location = new System.Drawing.Point(230, 5);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(36, 27);
             this.lblInfo.TabIndex = 22;

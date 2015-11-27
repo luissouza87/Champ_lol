@@ -36,14 +36,47 @@ namespace AlmirTrabalho
             txbIdade.Enabled = status;
             txbNick.Enabled = status;
             btnCadastro.Enabled = !status;
-            btnCancelar.Enabled = status;
+            btnCancelarC.Enabled = status;
             btnInserir.Enabled = status;
             btnSair.Enabled = !status;
+            btnAtualizar.Enabled = !status;
+            btnDeletar.Enabled = !status;
+        }
+        private void idHab(bool status, string info)
+        {
+            lblId.Visible = status;
+            txtid.Visible = status;
+            lbId.Visible = status;
+            lblInfo.Visible = status;
+            lblInfo.Text = info;
+        }
+        private void limpaCampos()
+        {
+            txtid.Text = "";
+            txbNome.Text = "";
+            txbIdade.Text = "";
+            txbNick.Text = "";
+        }
+        private void radControl(bool status)
+        {
+            rdbComTime.Enabled = status;
+            rdbSemTime.Enabled = status;
+            rdbSemTime.Checked = status;
+            rdbComTime.Checked = status;
+        }
+        private void timeV(bool status)
+        {
+            lblTime.Visible = status;
+            cbbTime.Visible = status;
+            lblCodT.Visible = status;
+            txbCodT.Visible = status;
         }
 
         private void frmCadastroJogadores_Load(object sender, EventArgs e)
         {
+            limpaCampos();
             habilitaCampos(false);
+            radControl(false);
             lblTime.Visible = false;
             cbbTime.Visible = false;
             lblCodT.Visible = false;
@@ -58,23 +91,24 @@ namespace AlmirTrabalho
             cbbTime.DisplayMember = "nome";
             cbbTime.ValueMember = "id";
             cbbTime.DataSource = ListaTime;
+            btnInserir.Visible = false;
+            btnCancelarC.Visible = false;
+            btUpdate.Visible = false;
+            btnCancelarA.Visible = false;
+            btDeletar.Visible = false;
+            btnCancelarD.Visible = false;
+            idHab(false,@"\/");
 
         }
 
         private void rdbSemTime_CheckedChanged(object sender, EventArgs e)
         {
-            lblTime.Visible = false;
-            cbbTime.Visible = false;
-            lblCodT.Visible = false;
-            txbCodT.Visible = false;
+            timeV(false);
         }
 
         private void rdbComTime_CheckedChanged(object sender, EventArgs e)
         {
-            lblTime.Visible = true;
-            cbbTime.Visible = true;
-            lblCodT.Visible = true;
-            txbCodT.Visible = true;
+            timeV(true);
 
         }
 
@@ -85,23 +119,31 @@ namespace AlmirTrabalho
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            limpaCampos();
             habilitaCampos(true);
+            radControl(true);
             txbNome.Focus();
             rdbSemTime.Checked = true;
+            btnInserir.Visible = true;
+            btnCancelarC.Visible = true;
+            btnAtualizar.Enabled = false;
+            btnDeletar.Enabled = false;
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            limpaCampos();
             habilitaCampos(false);
             txbNome.Text = "";
             txbIdade.Text = "";
             txbNick.Text = "";
-            rdbSemTime.Checked = false;
-            rdbComTime.Checked = false;
-            lblTime.Visible = false;
-            cbbTime.Visible = false;
-            lblCodT.Visible = false;
-            txbCodT.Visible = false;
+            radControl(false);
+            timeV(false);
+            btnInserir.Visible = false;
+            btnCancelarC.Visible = false;
+            btnAtualizar.Enabled = true;
+            btnDeletar.Enabled = true;
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -123,7 +165,12 @@ namespace AlmirTrabalho
 
             dalJogador.Insert(Jogador);
             dgvJogadores.DataSource = dalJogador.Select();
-
+            limpaCampos();
+            radControl(false);
+            timeV(false);
+            habilitaCampos(false);
+            btnInserir.Visible = false;
+            btnCancelarC.Visible = false;
         }
 
         private void cbbTime_SelectedIndexChanged(object sender, EventArgs e)
@@ -156,6 +203,14 @@ namespace AlmirTrabalho
 
             dalJogador.Update(Jogador);
             dgvJogadores.DataSource = dalJogador.Select();
+            limpaCampos();
+            idHab(false,@"\/");
+            radControl(false);
+            timeV(false);
+            habilitaCampos(false);
+            btnCancelarA.Visible = false;
+            btUpdate.Visible = false;
+
         }
 
         private void btDeletar_Click(object sender, EventArgs e)
@@ -167,7 +222,70 @@ namespace AlmirTrabalho
 
             daljogador.Delete(Jogadores);
             dgvJogadores.DataSource = daljogador.Select();
+            limpaCampos();
+            idHab(false,@"\/");
+            habilitaCampos(false);
+            radControl(false);
+            timeV(false);
+            btnCancelarD.Visible = false;
+            btDeletar.Visible = false;
 
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            habilitaCampos(true);
+            radControl(true);
+            rdbSemTime.Checked = true;
+            btnCancelarA.Visible = true;
+            btUpdate.Visible = true;
+            idHab(true,@"\/ Selecione a baixo p/ Atualizar!");
+            btUpdate.Enabled = false;
+        }
+
+        private void btnCancelarA_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            habilitaCampos(false);
+            btnCancelarA.Visible = false;
+            btUpdate.Visible = false;
+            idHab(false,@"\/");
+            radControl(false);
+            timeV(false);
+        }
+
+        private void btnCancelarD_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+            habilitaCampos(false);
+            radControl(false);
+            timeV(false);
+            btnCancelarD.Visible = false;
+            btDeletar.Visible = false;
+            idHab(false,@"\/");
+            
+
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            idHab(true, @"\/ Selecione a baixo p/ Deletar!");
+            limpaCampos();
+            habilitaCampos(true);
+            btnCancelarD.Visible = true;
+            btDeletar.Visible = true;
+            btDeletar.Enabled = false;
+        }
+
+        private void dgvJogadores_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            txtid.Text = dgvJogadores.SelectedRows[0].Cells[0].Value.ToString();
+            txbNome.Text = dgvJogadores.SelectedRows[0].Cells[1].Value.ToString();
+            txbIdade.Text = dgvJogadores.SelectedRows[0].Cells[2].Value.ToString();
+            txbNick.Text = dgvJogadores.SelectedRows[0].Cells[3].Value.ToString();
+            btUpdate.Enabled = true;
+            btDeletar.Enabled = true;
         }
     }
 }

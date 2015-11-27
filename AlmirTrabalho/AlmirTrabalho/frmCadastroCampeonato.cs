@@ -35,11 +35,11 @@ namespace AlmirTrabalho
 
         private void habilitaCampos(bool status)
         {
-            txtIdUp.Enabled = status;
             txtNome.Enabled = status;
             txtCapacidade.Enabled = status;
             txtLocal.Enabled = status;
             txtPremiacao.Enabled = status;
+            dgvCadasCamp.Enabled = status;
         }
 
         private void btcadastar_Click(object sender, EventArgs e)
@@ -79,6 +79,7 @@ namespace AlmirTrabalho
             lblid.Visible = false;
             lblInfo.Visible = false;
             txtIdUp.Visible = false;
+            
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
@@ -139,6 +140,7 @@ namespace AlmirTrabalho
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
             btSair.Enabled = false;
+            dgvCadasCamp.Enabled = false;
         }
 
         private void btnCanC_Click(object sender, EventArgs e)
@@ -150,6 +152,7 @@ namespace AlmirTrabalho
             btnDeletar.Enabled = true;
             btSair.Enabled = true;
             limpaCampos();
+            dgvCadasCamp.Enabled = false;
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
@@ -157,12 +160,13 @@ namespace AlmirTrabalho
             habilitaCampos(true);
             limpaCampos();
             btUpdate.Visible = true;
+            btUpdate.Enabled = false;
             btnCanA.Visible = true;
             btnCadastrar.Enabled = false;
             btnDeletar.Enabled = false;
             btSair.Enabled = false;
             lblid.Visible = true;
-            editDelet(true, "<-Informe o codigo para atualização!");
+            editDelet(true, "Selecione o campo abaixo p/ atualização!");
             txtIdUp.Focus();
             
         }
@@ -177,19 +181,21 @@ namespace AlmirTrabalho
             btSair.Enabled = true;
             editDelet(false, "<-");
             limpaCampos();
+            dgvCadasCamp.Enabled = false;
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             limpaCampos();
-            txtIdUp.Enabled = true;
             btDelete.Visible = true;
+            btDelete.Enabled = false;
             btnCanD.Visible = true;
             btnCadastrar.Enabled = false;
             btnAtualizar.Enabled = false;
             btSair.Enabled = false;
-            editDelet(true, "<-Informe o codigo para deletar!");
+            editDelet(true, "Selecione o campo abaixo p/ deletar!");
             txtIdUp.Focus();
+            dgvCadasCamp.Enabled = true;
         }
 
         private void btnCanD_Click(object sender, EventArgs e)
@@ -202,6 +208,19 @@ namespace AlmirTrabalho
             btSair.Enabled = true;
             editDelet(false, "<-");
             limpaCampos();
+            dgvCadasCamp.Enabled = false;
+        }
+
+        private void dgvCadasCamp_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            txtIdUp.Text = dgvCadasCamp.SelectedRows[0].Cells[0].Value.ToString();
+            txtNome.Text = dgvCadasCamp.SelectedRows[0].Cells[1].Value.ToString();
+            txtCapacidade.Text = dgvCadasCamp.SelectedRows[0].Cells[2].Value.ToString();
+            txtLocal.Text = dgvCadasCamp.SelectedRows[0].Cells[3].Value.ToString();
+            txtPremiacao.Text = dgvCadasCamp.SelectedRows[0].Cells[4].Value.ToString();
+            btUpdate.Enabled = true;
+            btDelete.Enabled = true;
+
         }
     }
 }
