@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace AlmirTrabalho
 {
-    public partial class frmConsultaJogador : Form
+    public partial class frmConsultaTimes : Form
     {
-        Camadas.BLL.jogador bllJogador = new Camadas.BLL.jogador();
-        List<Camadas.MODEL.Jogadores> listaJogadores = new List<Camadas.MODEL.Jogadores>();
+        Camadas.BLL.Time bllTimes = new Camadas.BLL.Time();
+        List<Camadas.MODEL.time> listaTimes = new List<Camadas.MODEL.time>();
 
-        public frmConsultaJogador()
+        public frmConsultaTimes()
         {
             InitializeComponent();
         }
@@ -43,8 +43,8 @@ namespace AlmirTrabalho
         private void rdbTodos_CheckedChanged(object sender, EventArgs e)
         {
             setVisible(false, "");
-            listaJogadores = bllJogador.Select();
-            dgvConsulJogador.DataSource = listaJogadores;
+            listaTimes = bllTimes.Select();
+            dgvConsulJogador.DataSource = listaTimes;
         }
 
         private void rdbNome_CheckedChanged(object sender, EventArgs e)
@@ -61,16 +61,16 @@ namespace AlmirTrabalho
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
             if (rdbNome.Checked)
-                listaJogadores = bllJogador.SelectPorNome(txbPesquisa.Text);
+                listaTimes = bllTimes.SelectPorTime(txbPesquisa.Text);
             else if (rdbNick.Checked)
-                listaJogadores = bllJogador.SelectPorNickname(txbPesquisa.Text);
-                dgvConsulJogador.DataSource = listaJogadores;
+                listaTimes = bllTimes.SelectPorID(Convert.ToInt32(txbPesquisa.Text));
+                dgvConsulJogador.DataSource = listaTimes;
         }
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            frmCadastroJogadores frmCadasJogadores = new frmCadastroJogadores();
-            frmCadasJogadores.Show();
+            frmCadastrotime frmCadasTime = new frmCadastrotime();
+            frmCadasTime.Show();
         }
     }
 }

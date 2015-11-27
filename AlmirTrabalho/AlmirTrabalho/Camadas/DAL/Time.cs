@@ -103,7 +103,7 @@ namespace AlmirTrabalho.Camadas.DAL
             }
             catch
             {
-                Console.WriteLine("Deu erro na execução da seleção de Produtos...");
+                Console.WriteLine("Erro na Seleção");
             }
             finally
             {
@@ -178,6 +178,72 @@ namespace AlmirTrabalho.Camadas.DAL
             {
                 conexao.Close();
             }
+        }
+
+        public List<MODEL.time> SelectPorID(int id)
+        {
+            List<MODEL.time> listaTime = new List<MODEL.time>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from TIME where cod=@id;";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@id", id);
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.time Time = new MODEL.time();
+                    Time.id = Convert.ToInt32(reader[0].ToString());
+                    Time.nome = (reader["nome"].ToString());
+                    Time.criador = (reader["criador"].ToString());
+                    Time.pais = (reader["pais"].ToString());
+                    //Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
+                    listaTime.Add(Time);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro selecao dos times");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return listaTime;
+        }
+
+        public List<MODEL.time> SelectPorTime(string nome)
+        {
+            List<MODEL.time> listaTime = new List<MODEL.time>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from time where (nome like @nome);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nome", nome.Trim() + "%");
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.time Time = new MODEL.time();
+                    Time.id = Convert.ToInt32(reader[0].ToString());
+                    Time.nome = (reader["nome"].ToString());
+                    Time.criador = (reader["criador"].ToString());
+                    Time.pais = (reader["pais"].ToString());
+                    Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
+                    listaTime.Add(Time);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Seleção");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return listaTime;
         }
     }
 }

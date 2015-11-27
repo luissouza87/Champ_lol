@@ -1,6 +1,6 @@
 ﻿namespace AlmirTrabalho
 {
-    partial class frmConsultaJogador
+    partial class frmConsultaTimes
     {
         /// <summary>
         /// Required designer variable.
@@ -77,10 +77,10 @@
             this.rdbNick.AutoSize = true;
             this.rdbNick.Location = new System.Drawing.Point(228, 19);
             this.rdbNick.Name = "rdbNick";
-            this.rdbNick.Size = new System.Drawing.Size(75, 17);
+            this.rdbNick.Size = new System.Drawing.Size(36, 17);
             this.rdbNick.TabIndex = 2;
             this.rdbNick.TabStop = true;
-            this.rdbNick.Text = "NickName";
+            this.rdbNick.Text = "ID";
             this.rdbNick.UseVisualStyleBackColor = true;
             this.rdbNick.CheckedChanged += new System.EventHandler(this.rdbNick_CheckedChanged);
             // 
@@ -89,10 +89,10 @@
             this.rdbNome.AutoSize = true;
             this.rdbNome.Location = new System.Drawing.Point(123, 19);
             this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(53, 17);
+            this.rdbNome.Size = new System.Drawing.Size(48, 17);
             this.rdbNome.TabIndex = 1;
             this.rdbNome.TabStop = true;
-            this.rdbNome.Text = "Nome";
+            this.rdbNome.Text = "Time";
             this.rdbNome.UseVisualStyleBackColor = true;
             this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
             // 
@@ -136,15 +136,15 @@
             // 
             // btUpdate
             // 
-            this.btUpdate.Location = new System.Drawing.Point(410, 23);
+            this.btUpdate.Location = new System.Drawing.Point(375, 17);
             this.btUpdate.Name = "btUpdate";
-            this.btUpdate.Size = new System.Drawing.Size(145, 23);
+            this.btUpdate.Size = new System.Drawing.Size(171, 23);
             this.btUpdate.TabIndex = 6;
             this.btUpdate.Text = "Update";
             this.btUpdate.UseVisualStyleBackColor = true;
             this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
             // 
-            // frmConsultaJogador
+            // frmConsultaTimes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,8 +157,8 @@
             this.Controls.Add(this.gpbPesquisa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvConsulJogador);
-            this.Name = "frmConsultaJogador";
-            this.Text = "Consulta de Jogador";
+            this.Name = "frmConsultaTimes";
+            this.Text = "Consulta de Times";
             this.Load += new System.EventHandler(this.frmConsultaJogador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsulJogador)).EndInit();
             this.gpbPesquisa.ResumeLayout(false);
