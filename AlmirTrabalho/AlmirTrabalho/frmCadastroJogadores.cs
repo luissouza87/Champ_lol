@@ -154,8 +154,8 @@ namespace AlmirTrabalho
                 Jogador.idTime = Convert.ToInt32(txbCodT.Text);
             }
 
-            dalJogador.Update(Jogador);//inseri as informacoes digitadas no banco
-            dgvJogadores.DataSource = dalJogador.Select();//mostrar banco 
+            dalJogador.Update(Jogador);
+            dgvJogadores.DataSource = dalJogador.Select();
         }
 
         private void btDeletar_Click(object sender, EventArgs e)
@@ -166,7 +166,7 @@ namespace AlmirTrabalho
 
 
             daljogador.Delete(Jogadores);
-            dgvJogadores.DataSource = daljogador.Select();//mostrar banco 
+            dgvJogadores.DataSource = daljogador.Select();
 
         }
     }

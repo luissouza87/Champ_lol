@@ -135,7 +135,7 @@ namespace AlmirTrabalho.Camadas.DAL
         public void Update(MODEL.time Time)//função update
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update TIMES set nome=@nome,criador=@criador , pais=@pais , qt_jogadores=@qtjogadores";
+            string sql = "Update TIMES set nome=@nome,criador=@criador , pais=@pais qt_jogadores=@qtjogadores";
             sql += " where cod=@id";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", Time.id);

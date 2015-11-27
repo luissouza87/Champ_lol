@@ -44,13 +44,13 @@
             this.txbIdade = new System.Windows.Forms.TextBox();
             this.txbNick = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblId = new System.Windows.Forms.Label();
             this.lblCodT = new System.Windows.Forms.Label();
             this.txbCodT = new System.Windows.Forms.TextBox();
             this.dgvJogadores = new System.Windows.Forms.DataGridView();
             this.btUpdate = new System.Windows.Forms.Button();
             this.btDeletar = new System.Windows.Forms.Button();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.gpbTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvJogadores)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,7 @@
             this.btnSair.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnSair.Location = new System.Drawing.Point(22, 465);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(305, 27);
+            this.btnSair.Size = new System.Drawing.Size(513, 27);
             this.btnSair.TabIndex = 3;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -213,21 +213,11 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblId.Location = new System.Drawing.Point(161, 41);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(36, 27);
-            this.lblId.TabIndex = 15;
-            this.lblId.Text = "-1";
-            // 
             // lblCodT
             // 
             this.lblCodT.AutoSize = true;
             this.lblCodT.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblCodT.Location = new System.Drawing.Point(203, 200);
+            this.lblCodT.Location = new System.Drawing.Point(225, 200);
             this.lblCodT.Name = "lblCodT";
             this.lblCodT.Size = new System.Drawing.Size(105, 27);
             this.lblCodT.TabIndex = 16;
@@ -236,7 +226,7 @@
             // txbCodT
             // 
             this.txbCodT.Enabled = false;
-            this.txbCodT.Location = new System.Drawing.Point(333, 207);
+            this.txbCodT.Location = new System.Drawing.Point(360, 207);
             this.txbCodT.Name = "txbCodT";
             this.txbCodT.Size = new System.Drawing.Size(57, 20);
             this.txbCodT.TabIndex = 17;
@@ -277,6 +267,16 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(36, 20);
             this.txtid.TabIndex = 21;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.lblId.Location = new System.Drawing.Point(161, 41);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(36, 27);
+            this.lblId.TabIndex = 15;
+            this.lblId.Text = "-1";
             // 
             // frmCadastroJogadores
             // 
@@ -334,12 +334,12 @@
         private System.Windows.Forms.TextBox txbIdade;
         private System.Windows.Forms.TextBox txbNick;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblCodT;
         private System.Windows.Forms.TextBox txbCodT;
         private System.Windows.Forms.DataGridView dgvJogadores;
         private System.Windows.Forms.Button btUpdate;
         private System.Windows.Forms.Button btDeletar;
         private System.Windows.Forms.TextBox txtid;
+        private System.Windows.Forms.Label lblId;
     }
 }

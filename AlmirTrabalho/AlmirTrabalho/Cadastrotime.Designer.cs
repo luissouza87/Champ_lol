@@ -32,7 +32,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCriador = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
-            this.lblidmais = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.txtCriador = new System.Windows.Forms.TextBox();
@@ -42,6 +41,9 @@
             this.dgvCadasTimes = new System.Windows.Forms.DataGridView();
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.lblMax = new System.Windows.Forms.Label();
+            this.btUpdate = new System.Windows.Forms.Button();
+            this.btDelete = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadasTimes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,16 +86,6 @@
             this.lblPais.Size = new System.Drawing.Size(63, 27);
             this.lblPais.TabIndex = 3;
             this.lblPais.Text = "País :";
-            // 
-            // lblidmais
-            // 
-            this.lblidmais.AutoSize = true;
-            this.lblidmais.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblidmais.Location = new System.Drawing.Point(106, 23);
-            this.lblidmais.Name = "lblidmais";
-            this.lblidmais.Size = new System.Drawing.Size(29, 27);
-            this.lblidmais.TabIndex = 4;
-            this.lblidmais.Text = "-1";
             // 
             // txtNome
             // 
@@ -176,11 +168,43 @@
             this.lblMax.TabIndex = 13;
             this.lblMax.Text = "5";
             // 
+            // btUpdate
+            // 
+            this.btUpdate.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btUpdate.Location = new System.Drawing.Point(106, 167);
+            this.btUpdate.Name = "btUpdate";
+            this.btUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btUpdate.TabIndex = 14;
+            this.btUpdate.Text = "&Update";
+            this.btUpdate.UseVisualStyleBackColor = true;
+            this.btUpdate.Click += new System.EventHandler(this.btUpdate_Click);
+            // 
+            // btDelete
+            // 
+            this.btDelete.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btDelete.Location = new System.Drawing.Point(210, 167);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(75, 23);
+            this.btDelete.TabIndex = 15;
+            this.btDelete.Text = "&Delete";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(106, 23);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(39, 20);
+            this.txtId.TabIndex = 16;
+            // 
             // frmCadastrotime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 334);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btDelete);
+            this.Controls.Add(this.btUpdate);
             this.Controls.Add(this.lblMax);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.dgvCadasTimes);
@@ -190,7 +214,6 @@
             this.Controls.Add(this.txtCriador);
             this.Controls.Add(this.txtPais);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblidmais);
             this.Controls.Add(this.lblPais);
             this.Controls.Add(this.lblCriador);
             this.Controls.Add(this.lblNome);
@@ -210,7 +233,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCriador;
         private System.Windows.Forms.Label lblPais;
-        private System.Windows.Forms.Label lblidmais;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.TextBox txtCriador;
@@ -220,5 +242,8 @@
         private System.Windows.Forms.DataGridView dgvCadasTimes;
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Label lblMax;
+        private System.Windows.Forms.Button btUpdate;
+        private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
