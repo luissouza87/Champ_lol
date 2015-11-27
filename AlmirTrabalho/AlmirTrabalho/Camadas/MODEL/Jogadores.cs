@@ -13,7 +13,6 @@ namespace AlmirTrabalho.Camadas.MODEL
         public string nome { get; set; }
         public int idade { get; set; }
         public string nickname { get; set; }
-        public int time { get; set; }
         public int idTime { get; set; }
     }
 }

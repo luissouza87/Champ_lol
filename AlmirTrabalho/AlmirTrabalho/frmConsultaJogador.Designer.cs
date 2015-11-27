@@ -30,15 +30,15 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.gpbPesquisa = new System.Windows.Forms.GroupBox();
-            this.rdbNick = new System.Windows.Forms.RadioButton();
-            this.rdbNome = new System.Windows.Forms.RadioButton();
-            this.rdbTodos = new System.Windows.Forms.RadioButton();
-            this.lblPesquisa = new System.Windows.Forms.Label();
-            this.txbPesquisa = new System.Windows.Forms.TextBox();
-            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gpbPesquisa.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -51,86 +51,83 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(32, 329);
+            this.button1.Location = new System.Drawing.Point(162, 329);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(523, 23);
+            this.button1.Size = new System.Drawing.Size(239, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Sair";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // gpbPesquisa
+            // groupBox1
             // 
-            this.gpbPesquisa.Controls.Add(this.rdbNick);
-            this.gpbPesquisa.Controls.Add(this.rdbNome);
-            this.gpbPesquisa.Controls.Add(this.rdbTodos);
-            this.gpbPesquisa.Location = new System.Drawing.Point(32, 4);
-            this.gpbPesquisa.Name = "gpbPesquisa";
-            this.gpbPesquisa.Size = new System.Drawing.Size(317, 44);
-            this.gpbPesquisa.TabIndex = 2;
-            this.gpbPesquisa.TabStop = false;
-            this.gpbPesquisa.Text = "Pesquisar por: ";
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(32, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(317, 35);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tipos de Pesquisa";
             // 
-            // rdbNick
+            // radioButton1
             // 
-            this.rdbNick.AutoSize = true;
-            this.rdbNick.Location = new System.Drawing.Point(228, 19);
-            this.rdbNick.Name = "rdbNick";
-            this.rdbNick.Size = new System.Drawing.Size(75, 17);
-            this.rdbNick.TabIndex = 2;
-            this.rdbNick.TabStop = true;
-            this.rdbNick.Text = "NickName";
-            this.rdbNick.UseVisualStyleBackColor = true;
-            this.rdbNick.CheckedChanged += new System.EventHandler(this.rdbNick_CheckedChanged);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 12);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(55, 17);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Todos";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // rdbNome
+            // radioButton2
             // 
-            this.rdbNome.AutoSize = true;
-            this.rdbNome.Location = new System.Drawing.Point(123, 19);
-            this.rdbNome.Name = "rdbNome";
-            this.rdbNome.Size = new System.Drawing.Size(53, 17);
-            this.rdbNome.TabIndex = 1;
-            this.rdbNome.TabStop = true;
-            this.rdbNome.Text = "Nome";
-            this.rdbNome.UseVisualStyleBackColor = true;
-            this.rdbNome.CheckedChanged += new System.EventHandler(this.rdbNome_CheckedChanged);
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(110, 12);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(53, 17);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Nome";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // rdbTodos
+            // radioButton3
             // 
-            this.rdbTodos.AutoSize = true;
-            this.rdbTodos.Location = new System.Drawing.Point(20, 19);
-            this.rdbTodos.Name = "rdbTodos";
-            this.rdbTodos.Size = new System.Drawing.Size(55, 17);
-            this.rdbTodos.TabIndex = 0;
-            this.rdbTodos.TabStop = true;
-            this.rdbTodos.Text = "Todos";
-            this.rdbTodos.UseVisualStyleBackColor = true;
-            this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(215, 12);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(75, 17);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "NickName";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // lblPesquisa
+            // label1
             // 
-            this.lblPesquisa.AutoSize = true;
-            this.lblPesquisa.Location = new System.Drawing.Point(32, 51);
-            this.lblPesquisa.Name = "lblPesquisa";
-            this.lblPesquisa.Size = new System.Drawing.Size(89, 13);
-            this.lblPesquisa.TabIndex = 3;
-            this.lblPesquisa.Text = "Tipo de Pesquisa";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 51);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Tipo de Pesquisa";
             // 
-            // txbPesquisa
+            // textBox1
             // 
-            this.txbPesquisa.Location = new System.Drawing.Point(32, 66);
-            this.txbPesquisa.Name = "txbPesquisa";
-            this.txbPesquisa.Size = new System.Drawing.Size(523, 20);
-            this.txbPesquisa.TabIndex = 4;
+            this.textBox1.Location = new System.Drawing.Point(32, 66);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(523, 20);
+            this.textBox1.TabIndex = 4;
             // 
-            // btnPesquisa
+            // button2
             // 
-            this.btnPesquisa.Location = new System.Drawing.Point(32, 93);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(75, 23);
-            this.btnPesquisa.TabIndex = 5;
-            this.btnPesquisa.Text = "Pesquisar";
-            this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(32, 93);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Pesquisar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmConsultaJogador
             // 
@@ -138,18 +135,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 364);
             this.ControlBox = false;
-            this.Controls.Add(this.btnPesquisa);
-            this.Controls.Add(this.txbPesquisa);
-            this.Controls.Add(this.lblPesquisa);
-            this.Controls.Add(this.gpbPesquisa);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmConsultaJogador";
             this.Text = "Consulta de Jogador";
-            this.Load += new System.EventHandler(this.frmConsultaJogador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.gpbPesquisa.ResumeLayout(false);
-            this.gpbPesquisa.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,12 +155,12 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox gpbPesquisa;
-        private System.Windows.Forms.RadioButton rdbNick;
-        private System.Windows.Forms.RadioButton rdbNome;
-        private System.Windows.Forms.RadioButton rdbTodos;
-        private System.Windows.Forms.Label lblPesquisa;
-        private System.Windows.Forms.TextBox txbPesquisa;
-        private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
     }
 }
