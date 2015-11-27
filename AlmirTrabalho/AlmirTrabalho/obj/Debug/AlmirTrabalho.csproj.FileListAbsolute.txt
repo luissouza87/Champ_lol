@@ -23,16 +23,3 @@ D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.fmprinci
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.Properties.Resources.resources
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.csproj.GenerateResource.Cache
 D:\gitHUB\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmConsultaJogador.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\bin\Debug\AlmirTrabalho.exe.config
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.exe
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.pdb
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\bin\Debug\AlmirTrabalho.exe
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\bin\Debug\AlmirTrabalho.pdb
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.csprojResolveAssemblyReference.cache
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastrotime.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastroCampeonato.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmCadastroJogadores.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmConsultaJogador.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.fmprincipal.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.Properties.Resources.resources
-C:\Users\kamuiyoshi\Desktop\Backup\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.csproj.GenerateResource.Cache

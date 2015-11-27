@@ -36,8 +36,8 @@
             this.lbIdade = new System.Windows.Forms.Label();
             this.lbNick = new System.Windows.Forms.Label();
             this.gpbTime = new System.Windows.Forms.GroupBox();
-            this.rdbComTime = new System.Windows.Forms.RadioButton();
             this.rdbSemTime = new System.Windows.Forms.RadioButton();
+            this.rdbComTime = new System.Windows.Forms.RadioButton();
             this.lblTime = new System.Windows.Forms.Label();
             this.cbbTime = new System.Windows.Forms.ComboBox();
             this.txbNome = new System.Windows.Forms.TextBox();
@@ -45,11 +45,7 @@
             this.txbNick = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
-            this.lblCodT = new System.Windows.Forms.Label();
-            this.txbCodT = new System.Windows.Forms.TextBox();
-            this.dgvJogadores = new System.Windows.Forms.DataGridView();
             this.gpbTime.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJogadores)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastro
@@ -72,12 +68,11 @@
             this.btnInserir.TabIndex = 2;
             this.btnInserir.Text = "&Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Comic Sans MS", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnSair.Location = new System.Drawing.Point(22, 465);
+            this.btnSair.Location = new System.Drawing.Point(24, 294);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(305, 27);
             this.btnSair.TabIndex = 3;
@@ -137,17 +132,6 @@
             this.gpbTime.TabStop = false;
             this.gpbTime.Text = "Time";
             // 
-            // rdbComTime
-            // 
-            this.rdbComTime.AutoSize = true;
-            this.rdbComTime.Location = new System.Drawing.Point(8, 62);
-            this.rdbComTime.Name = "rdbComTime";
-            this.rdbComTime.Size = new System.Drawing.Size(119, 31);
-            this.rdbComTime.TabIndex = 1;
-            this.rdbComTime.Text = "Com Time";
-            this.rdbComTime.UseVisualStyleBackColor = true;
-            this.rdbComTime.CheckedChanged += new System.EventHandler(this.rdbComTime_CheckedChanged);
-            // 
             // rdbSemTime
             // 
             this.rdbSemTime.AutoSize = true;
@@ -159,11 +143,22 @@
             this.rdbSemTime.UseVisualStyleBackColor = true;
             this.rdbSemTime.CheckedChanged += new System.EventHandler(this.rdbSemTime_CheckedChanged);
             // 
+            // rdbComTime
+            // 
+            this.rdbComTime.AutoSize = true;
+            this.rdbComTime.Location = new System.Drawing.Point(8, 62);
+            this.rdbComTime.Name = "rdbComTime";
+            this.rdbComTime.Size = new System.Drawing.Size(119, 31);
+            this.rdbComTime.TabIndex = 1;
+            this.rdbComTime.Text = "Com Time";
+            this.rdbComTime.UseVisualStyleBackColor = true;
+            this.rdbComTime.CheckedChanged += new System.EventHandler(this.rdbComTime_CheckedChanged);
+            // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblTime.Location = new System.Drawing.Point(161, 152);
+            this.lblTime.Location = new System.Drawing.Point(161, 177);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(168, 27);
             this.lblTime.TabIndex = 9;
@@ -172,11 +167,10 @@
             // cbbTime
             // 
             this.cbbTime.FormattingEnabled = true;
-            this.cbbTime.Location = new System.Drawing.Point(166, 182);
+            this.cbbTime.Location = new System.Drawing.Point(166, 207);
             this.cbbTime.Name = "cbbTime";
             this.cbbTime.Size = new System.Drawing.Size(163, 21);
             this.cbbTime.TabIndex = 10;
-            this.cbbTime.SelectedIndexChanged += new System.EventHandler(this.cbbTime_SelectedIndexChanged_1);
             // 
             // txbNome
             // 
@@ -220,41 +214,12 @@
             this.lblId.TabIndex = 15;
             this.lblId.Text = "-1";
             // 
-            // lblCodT
-            // 
-            this.lblCodT.AutoSize = true;
-            this.lblCodT.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.lblCodT.Location = new System.Drawing.Point(161, 214);
-            this.lblCodT.Name = "lblCodT";
-            this.lblCodT.Size = new System.Drawing.Size(105, 27);
-            this.lblCodT.TabIndex = 16;
-            this.lblCodT.Text = "Cod. Time";
-            // 
-            // txbCodT
-            // 
-            this.txbCodT.Enabled = false;
-            this.txbCodT.Location = new System.Drawing.Point(272, 221);
-            this.txbCodT.Name = "txbCodT";
-            this.txbCodT.Size = new System.Drawing.Size(57, 20);
-            this.txbCodT.TabIndex = 17;
-            // 
-            // dgvJogadores
-            // 
-            this.dgvJogadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJogadores.Location = new System.Drawing.Point(24, 294);
-            this.dgvJogadores.Name = "dgvJogadores";
-            this.dgvJogadores.Size = new System.Drawing.Size(303, 163);
-            this.dgvJogadores.TabIndex = 18;
-            // 
             // frmCadastroJogadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 504);
+            this.ClientSize = new System.Drawing.Size(352, 337);
             this.ControlBox = false;
-            this.Controls.Add(this.dgvJogadores);
-            this.Controls.Add(this.txbCodT);
-            this.Controls.Add(this.lblCodT);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txbNick);
@@ -275,7 +240,6 @@
             this.Load += new System.EventHandler(this.frmCadastroJogadores_Load);
             this.gpbTime.ResumeLayout(false);
             this.gpbTime.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvJogadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,8 +264,5 @@
         private System.Windows.Forms.TextBox txbNick;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Label lblCodT;
-        private System.Windows.Forms.TextBox txbCodT;
-        private System.Windows.Forms.DataGridView dgvJogadores;
     }
 }
