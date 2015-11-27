@@ -176,6 +176,7 @@
             this.cbbTime.Name = "cbbTime";
             this.cbbTime.Size = new System.Drawing.Size(163, 21);
             this.cbbTime.TabIndex = 10;
+            this.cbbTime.SelectedIndexChanged += new System.EventHandler(this.cbbTime_SelectedIndexChanged_1);
             // 
             // txbNome
             // 

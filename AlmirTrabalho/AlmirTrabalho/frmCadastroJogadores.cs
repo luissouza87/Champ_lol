@@ -16,6 +16,20 @@ namespace AlmirTrabalho
         {
             InitializeComponent();
         }
+
+        private void recuperavalorTime()
+        {
+            List<Camadas.MODEL.time> listaTime = new List<Camadas.MODEL.time>();
+            Camadas.BLL.Time bllTime = new Camadas.BLL.Time();
+            int idTime = Convert.ToInt32(txbCodT.Text);
+            if (idTime > 0)
+            {
+                listaTime = bllTime.SelectById(idTime);
+                if (listaTime != null)
+                    txbCodT.Text = listaTime[0].id.ToString();
+                else txbCodT.Text = "0";
+            }
+        }
         private void habilitaCampos(bool status)
         {
             txbNome.Enabled = status;
@@ -37,6 +51,13 @@ namespace AlmirTrabalho
 
             Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
             dgvJogadores.DataSource = dalJogador.Select();
+
+            List<Camadas.MODEL.time> ListaTime = new List<Camadas.MODEL.time>();
+            Camadas.BLL.Time bllTime = new Camadas.BLL.Time();
+            ListaTime = bllTime.Select();
+            cbbTime.DisplayMember = "nome";
+            cbbTime.ValueMember = "id";
+            cbbTime.DataSource = ListaTime;
 
         }
 
@@ -103,6 +124,17 @@ namespace AlmirTrabalho
             dalJogador.Insert(Jogador);
             dgvJogadores.DataSource = dalJogador.Select();
 
+        }
+
+        private void cbbTime_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbTime_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            txbCodT.Text = cbbTime.SelectedValue.ToString();
+            recuperavalorTime();
         }
     }
 }

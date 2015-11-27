@@ -15,6 +15,20 @@ namespace AlmirTrabalho.Camadas.BLL
             return dalTime.Select();
         }
 
+        public List<MODEL.time> Selectbynome (string nome)
+        {
+            DAL.Time dalTime = new DAL.Time();
+            // escrever regras de negócios
+            return dalTime.Selectbynome(nome);
+        }
+
+        public List<MODEL.time> SelectById(int id)
+        {
+            DAL.Time dalTime = new DAL.Time();
+            // escrever regras de negócios
+            return dalTime.SelectById(id);
+        }
+
         public void Insert(MODEL.time Time)
         {
             DAL.Time dalTime = new DAL.Time();
