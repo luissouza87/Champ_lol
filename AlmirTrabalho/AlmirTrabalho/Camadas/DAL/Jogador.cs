@@ -68,7 +68,7 @@ namespace AlmirTrabalho.Camadas.DAL
             }
             catch
             {
-                Console.WriteLine("Erro na Seleção");
+                Console.WriteLine("Erro na Seleção do Nome");
             }
             finally
             {
@@ -143,6 +143,39 @@ namespace AlmirTrabalho.Camadas.DAL
             {
                 conexao.Close();
             }
+        }
+
+        public List<MODEL.Jogadores> SelectPorNick (string nickname)
+        {
+            List<MODEL.Jogadores> listaJogadores = new List<MODEL.Jogadores>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from JOGADOR where (nickname like @nickname);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@nickname", nickname.Trim() + "%");
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.Jogadores Jogador = new MODEL.Jogadores();
+                    Jogador.id = Convert.ToInt32(reader[0].ToString());
+                    Jogador.nome = (reader["nome"].ToString());
+                    Jogador.idade = Convert.ToInt32(reader["idade"].ToString());
+                    Jogador.nickname = (reader["nickname"].ToString());
+                    Jogador.idTime = Convert.ToInt32(reader["idTime"].ToString());
+                    listaJogadores.Add(Jogador);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Seleção do Nome");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return listaJogadores;
         }
     }
 }

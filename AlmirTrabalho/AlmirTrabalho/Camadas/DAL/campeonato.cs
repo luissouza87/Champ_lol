@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlmirTrabalho.Camadas.DAL // chamando os metodos para deletar , inserir , atualizar e mostrar
-{                                   // as tabelas
+namespace AlmirTrabalho.Camadas.DAL
+{                                   
     public class campeonato
     {
         private string strCon = Conexao.getConexao();

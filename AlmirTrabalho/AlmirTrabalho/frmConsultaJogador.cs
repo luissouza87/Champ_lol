@@ -62,6 +62,8 @@ namespace AlmirTrabalho
         {
             if (rdbNome.Checked)
                 listaJogadores = bllJogador.SelectPorNome(txbPesquisa.Text);
+            else if (rdbNick.Checked)
+                listaJogadores = bllJogador.SelectPorNickname(txbPesquisa.Text);
                 dgvConsulJogador.DataSource = listaJogadores;
         }
     }

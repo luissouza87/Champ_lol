@@ -77,6 +77,8 @@ namespace AlmirTrabalho.Camadas.DAL
             return listaTime;
         }
 
+        
+
         public List<MODEL.time> Selectbynome(string nome)
         {
             List<MODEL.time> listaTime = new List<MODEL.time>();
@@ -176,7 +178,7 @@ namespace AlmirTrabalho.Camadas.DAL
             {
                 conexao.Close();
             }
-        } 
+        }
     }
 }
 
