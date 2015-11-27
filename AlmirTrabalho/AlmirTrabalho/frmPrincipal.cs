@@ -54,5 +54,12 @@ namespace AlmirTrabalho
             frmConsulJogador.MdiParent = this;
             frmConsulJogador.Show();
         }
+
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRelatorios frmRel = new frmRelatorios();
+            frmRel.MdiParent = this;
+            frmRel.Show();
+        }
     }
 }

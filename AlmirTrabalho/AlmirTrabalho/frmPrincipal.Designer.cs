@@ -40,6 +40,7 @@
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,6 +49,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.consultaToolStripMenuItem,
+            this.relatóriosToolStripMenuItem,
             this.ajudaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -69,21 +71,21 @@
             // participantesToolStripMenuItem
             // 
             this.participantesToolStripMenuItem.Name = "participantesToolStripMenuItem";
-            this.participantesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.participantesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.participantesToolStripMenuItem.Text = "&Jogadores";
             this.participantesToolStripMenuItem.Click += new System.EventHandler(this.participantesToolStripMenuItem_Click_1);
             // 
             // timesToolStripMenuItem
             // 
             this.timesToolStripMenuItem.Name = "timesToolStripMenuItem";
-            this.timesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.timesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.timesToolStripMenuItem.Text = "&Times";
             this.timesToolStripMenuItem.Click += new System.EventHandler(this.timesToolStripMenuItem_Click);
             // 
             // campeonatosToolStripMenuItem
             // 
             this.campeonatosToolStripMenuItem.Name = "campeonatosToolStripMenuItem";
-            this.campeonatosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.campeonatosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.campeonatosToolStripMenuItem.Text = "&Campeonatos";
             this.campeonatosToolStripMenuItem.Click += new System.EventHandler(this.campeonatosToolStripMenuItem_Click);
             // 
@@ -101,26 +103,26 @@
             // timesToolStripMenuItem1
             // 
             this.timesToolStripMenuItem1.Name = "timesToolStripMenuItem1";
-            this.timesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.timesToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.timesToolStripMenuItem1.Text = "&Jogadores";
             this.timesToolStripMenuItem1.Click += new System.EventHandler(this.timesToolStripMenuItem1_Click);
             // 
             // timesToolStripMenuItem2
             // 
             this.timesToolStripMenuItem2.Name = "timesToolStripMenuItem2";
-            this.timesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.timesToolStripMenuItem2.Size = new System.Drawing.Size(148, 22);
             this.timesToolStripMenuItem2.Text = "&Times";
             // 
             // campeonatosToolStripMenuItem1
             // 
             this.campeonatosToolStripMenuItem1.Name = "campeonatosToolStripMenuItem1";
-            this.campeonatosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.campeonatosToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.campeonatosToolStripMenuItem1.Text = "&Campeonatos";
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.relatoriosToolStripMenuItem.Text = "&Relatorios";
             // 
             // ajudaToolStripMenuItem
@@ -135,6 +137,13 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // relatóriosToolStripMenuItem
+            // 
+            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            this.relatóriosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosToolStripMenuItem_Click);
             // 
             // fmprincipal
             // 
@@ -170,6 +179,7 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
     }
 }
 

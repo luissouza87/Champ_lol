@@ -16,7 +16,7 @@ namespace AlmirTrabalho
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastroJogadores());
+            Application.Run(new fmprincipal());
         }
     }
 }
