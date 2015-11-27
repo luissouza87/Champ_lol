@@ -22,15 +22,5 @@ namespace AlmirTrabalho.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-RC91DCS;Initial Catalog=CAMPEONATO;Integrated Security=True")]
-        public string CAMPEONATOConnectionString {
-            get {
-                return ((string)(this["CAMPEONATOConnectionString"]));
-            }
-        }
     }
 }

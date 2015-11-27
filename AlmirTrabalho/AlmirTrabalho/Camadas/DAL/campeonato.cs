@@ -110,5 +110,38 @@ namespace AlmirTrabalho.Camadas.DAL
                 conexao.Close();
             }
         }
+
+        public List<MODEL.campeonato> SelectPorPais(string local)
+        {
+            List<MODEL.campeonato> listaCampeonato = new List<MODEL.campeonato>();
+            SqlConnection conexao = new SqlConnection(strCon);
+            string sql = "Select * from CAMPEONATO where (local like @local);";
+            SqlCommand cmd = new SqlCommand(sql, conexao);
+            cmd.Parameters.AddWithValue("@local", local.Trim() + "%");
+            conexao.Open();
+            try
+            {
+                SqlDataReader reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (reader.Read())
+                {
+                    MODEL.campeonato Campeonato = new MODEL.campeonato();
+                    Campeonato.id = Convert.ToInt32(reader[0].ToString());
+                    Campeonato.nome = (reader["nome"].ToString());
+                    Campeonato.capacidade = Convert.ToInt32(reader["capacidade"].ToString());
+                    Campeonato.local = (reader["local"].ToString());
+                    Campeonato.premiacao = (reader["premiacao"].ToString());
+                    listaCampeonato.Add(Campeonato);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Erro na Seleção do Nome");
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return listaCampeonato;
+        }
     }
 }

@@ -50,3 +50,4 @@ C:\Users\kamuiyoshi\Desktop\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\Almi
 C:\Users\kamuiyoshi\Desktop\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.Properties.Resources.resources
 C:\Users\kamuiyoshi\Desktop\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.csproj.GenerateResource.Cache
 C:\Users\kamuiyoshi\Desktop\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmConsultaTimes.resources
+C:\Users\kamuiyoshi\Desktop\Champ_lol\AlmirTrabalho\AlmirTrabalho\obj\Debug\AlmirTrabalho.frmConsultaCampeonato.resources

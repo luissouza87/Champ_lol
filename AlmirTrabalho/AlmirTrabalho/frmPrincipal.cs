@@ -55,11 +55,22 @@ namespace AlmirTrabalho
             frmConsulJogador.Show();
         }
 
-        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fmprincipal_Load(object sender, EventArgs e)
         {
-            frmRelatorios frmRel = new frmRelatorios();
-            frmRel.MdiParent = this;
-            frmRel.Show();
+
+        }
+
+        private void timesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmConsultaTimes frmConsulTimes = new frmConsultaTimes();
+            frmConsulTimes.MdiParent = this;
+            frmConsulTimes.Show();
+        }
+
+        private void campeonatosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaCampeonato frmConsulCampeonato = new frmConsultaCampeonato();
+            frmConsulCampeonato.Show();
         }
     }
 }

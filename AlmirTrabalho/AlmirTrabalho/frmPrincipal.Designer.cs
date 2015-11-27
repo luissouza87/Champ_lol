@@ -40,7 +40,6 @@
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +48,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
             this.consultaToolStripMenuItem,
-            this.relatóriosToolStripMenuItem,
             this.ajudaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -103,26 +101,28 @@
             // timesToolStripMenuItem1
             // 
             this.timesToolStripMenuItem1.Name = "timesToolStripMenuItem1";
-            this.timesToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.timesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.timesToolStripMenuItem1.Text = "&Jogadores";
             this.timesToolStripMenuItem1.Click += new System.EventHandler(this.timesToolStripMenuItem1_Click);
             // 
             // timesToolStripMenuItem2
             // 
             this.timesToolStripMenuItem2.Name = "timesToolStripMenuItem2";
-            this.timesToolStripMenuItem2.Size = new System.Drawing.Size(148, 22);
+            this.timesToolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
             this.timesToolStripMenuItem2.Text = "&Times";
+            this.timesToolStripMenuItem2.Click += new System.EventHandler(this.timesToolStripMenuItem2_Click);
             // 
             // campeonatosToolStripMenuItem1
             // 
             this.campeonatosToolStripMenuItem1.Name = "campeonatosToolStripMenuItem1";
-            this.campeonatosToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.campeonatosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.campeonatosToolStripMenuItem1.Text = "&Campeonatos";
+            this.campeonatosToolStripMenuItem1.Click += new System.EventHandler(this.campeonatosToolStripMenuItem1_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.relatoriosToolStripMenuItem.Text = "&Relatorios";
             // 
             // ajudaToolStripMenuItem
@@ -138,13 +138,6 @@
             this.sairToolStripMenuItem.Text = "&Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // relatóriosToolStripMenuItem
-            // 
-            this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.relatóriosToolStripMenuItem.Text = "Relatórios";
-            this.relatóriosToolStripMenuItem.Click += new System.EventHandler(this.relatóriosToolStripMenuItem_Click);
-            // 
             // fmprincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +151,7 @@
             this.Name = "fmprincipal";
             this.Text = "Cadastro de Participantes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fmprincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -179,7 +173,6 @@
         private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatoriosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relatóriosToolStripMenuItem;
     }
 }
 

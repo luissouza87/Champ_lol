@@ -93,6 +93,7 @@ namespace AlmirTrabalho
 
             daltime.Update(Times);
             dgvCadasTimes.DataSource = daltime.Select();
+
             btnControl(true);
             btUpdate.Visible = false;
             limpaCampos();

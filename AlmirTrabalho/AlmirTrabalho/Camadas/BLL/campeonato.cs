@@ -15,6 +15,13 @@ namespace AlmirTrabalho.Camadas.BLL
             return dalcamp.Select();
         }
 
+        public List<MODEL.campeonato> SelectPorPais(string local)
+        {
+            DAL.campeonato dalcampeonato = new DAL.campeonato();
+            // escrever regras de negócios
+            return dalcampeonato.SelectPorPais(local);
+        }
+
         public void Insert(MODEL.campeonato Campeonato)
         {
             DAL.campeonato dalcamp = new DAL.campeonato();

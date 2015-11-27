@@ -137,14 +137,14 @@ namespace AlmirTrabalho.Camadas.DAL
         public void Update(MODEL.time Time)//função update
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Update TIMES set nome=@nome,criador=@criador , pais=@pais qt_jogadores=@qtjogadores";
+            string sql = "Update TIME set nome=@nome,criador=@criador , pais=@pais";
             sql += " where cod=@id";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("@id", Time.id);
             cmd.Parameters.AddWithValue("@nome", Time.nome);
             cmd.Parameters.AddWithValue("@criador", Time.criador);
             cmd.Parameters.AddWithValue("@pais", Time.pais);
-            cmd.Parameters.AddWithValue("@qtjogadores", Time.qt_jogadores);
+            //cmd.Parameters.AddWithValue("@qtjogadores", Time.qt_jogadores);
             conexao.Open();
             try
             {
@@ -162,7 +162,7 @@ namespace AlmirTrabalho.Camadas.DAL
         public void Delete(MODEL.time Time)
         {
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "delete from TIMES where cod=@id;";
+            string sql = "delete from TIME where cod=@id;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             cmd.Parameters.AddWithValue("id", Time.id);
             conexao.Open();
