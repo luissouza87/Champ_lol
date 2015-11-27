@@ -148,6 +148,7 @@
             // dgvCadasTimes
             // 
             this.dgvCadasTimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCadasTimes.Enabled = false;
             this.dgvCadasTimes.Location = new System.Drawing.Point(12, 255);
             this.dgvCadasTimes.Name = "dgvCadasTimes";
             this.dgvCadasTimes.Size = new System.Drawing.Size(381, 97);

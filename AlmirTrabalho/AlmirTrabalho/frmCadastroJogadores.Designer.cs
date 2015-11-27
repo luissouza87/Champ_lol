@@ -239,6 +239,7 @@
             // dgvJogadores
             // 
             this.dgvJogadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvJogadores.Enabled = false;
             this.dgvJogadores.Location = new System.Drawing.Point(24, 324);
             this.dgvJogadores.Name = "dgvJogadores";
             this.dgvJogadores.Size = new System.Drawing.Size(511, 133);

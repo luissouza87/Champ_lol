@@ -17,6 +17,8 @@ namespace AlmirTrabalho
             InitializeComponent();
         }
 
+        bool delete = false;
+
         private void recuperavalorTime()
         {
             List<Camadas.MODEL.time> listaTime = new List<Camadas.MODEL.time>();
@@ -98,6 +100,7 @@ namespace AlmirTrabalho
             btDeletar.Visible = false;
             btnCancelarD.Visible = false;
             idHab(false,@"\/");
+            dgvJogadores.Enabled = false;
 
         }
 
@@ -144,6 +147,7 @@ namespace AlmirTrabalho
             btnCancelarC.Visible = false;
             btnAtualizar.Enabled = true;
             btnDeletar.Enabled = true;
+            dgvJogadores.Enabled = false;
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -210,6 +214,7 @@ namespace AlmirTrabalho
             habilitaCampos(false);
             btnCancelarA.Visible = false;
             btUpdate.Visible = false;
+            dgvJogadores.Enabled = false;
 
         }
 
@@ -229,6 +234,8 @@ namespace AlmirTrabalho
             timeV(false);
             btnCancelarD.Visible = false;
             btDeletar.Visible = false;
+            dgvJogadores.Enabled = false;
+            delete = false;
 
         }
 
@@ -242,6 +249,7 @@ namespace AlmirTrabalho
             btUpdate.Visible = true;
             idHab(true,@"\/ Selecione a baixo p/ Atualizar!");
             btUpdate.Enabled = false;
+            dgvJogadores.Enabled = true;
         }
 
         private void btnCancelarA_Click(object sender, EventArgs e)
@@ -253,6 +261,7 @@ namespace AlmirTrabalho
             idHab(false,@"\/");
             radControl(false);
             timeV(false);
+            dgvJogadores.Enabled = false;
         }
 
         private void btnCancelarD_Click(object sender, EventArgs e)
@@ -264,7 +273,8 @@ namespace AlmirTrabalho
             btnCancelarD.Visible = false;
             btDeletar.Visible = false;
             idHab(false,@"\/");
-            
+            dgvJogadores.Enabled = false;
+            delete = false;
 
         }
 
@@ -276,6 +286,12 @@ namespace AlmirTrabalho
             btnCancelarD.Visible = true;
             btDeletar.Visible = true;
             btDeletar.Enabled = false;
+            dgvJogadores.Enabled = true;
+            delete = true;
+            txbNome.Enabled = false;
+            txbIdade.Enabled = false;
+            txbNick.Enabled = false;
+            
         }
 
         private void dgvJogadores_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -286,6 +302,12 @@ namespace AlmirTrabalho
             txbNick.Text = dgvJogadores.SelectedRows[0].Cells[3].Value.ToString();
             btUpdate.Enabled = true;
             btDeletar.Enabled = true;
+            if (delete != false)
+            {
+                txbNome.Enabled = false;
+                txbIdade.Enabled = false;
+                txbNick.Enabled = false;
+            }
         }
     }
 }

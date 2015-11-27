@@ -16,6 +16,7 @@ namespace AlmirTrabalho
         {
             InitializeComponent();
         }
+        bool delete = false;
 
         private void habilitaCampos(bool status)
         {
@@ -95,6 +96,7 @@ namespace AlmirTrabalho
             btnControl(true);
             btUpdate.Visible = false;
             limpaCampos();
+            dgvCadasTimes.Enabled = false;
         }
 
         private void btDelete_Click(object sender, EventArgs e)
@@ -109,6 +111,8 @@ namespace AlmirTrabalho
             btnControl(true);
             btDelete.Visible = false;
             limpaCampos();
+            delete = false;
+            dgvCadasTimes.Enabled = false;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -138,6 +142,8 @@ namespace AlmirTrabalho
             limpaCampos();
             lblMax.Text = "5";
             idHab(false, @"\/");
+            delete = false;
+            dgvCadasTimes.Enabled = false;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -156,23 +162,25 @@ namespace AlmirTrabalho
 
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
-            habilitaCampos(true);
             btnCancelar.Enabled = true;
             btnControl(false);
             btUpdate.Visible = true;
             btUpdate.Enabled = false;
             limpaCampos();
             idHab(true, @"Selecione abaixo p/ editar!");
+            dgvCadasTimes.Enabled = true;
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
+            delete = true;
             btnCancelar.Enabled = true;
             btnControl(false);
             btDelete.Enabled = false;
             btDelete.Visible = true;
             limpaCampos();
             idHab(true, @"Selecione abaixo p/ deletar!");
+            dgvCadasTimes.Enabled = true;
         }
 
         private void dgvCadasTimes_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -183,6 +191,11 @@ namespace AlmirTrabalho
             txtPais.Text = dgvCadasTimes.SelectedRows[0].Cells[3].Value.ToString();
             btUpdate.Enabled = true;
             btDelete.Enabled = true;
+            if (delete != true)
+            {
+                habilitaCampos(true);    
+            }
+            
         }
     }
 }
