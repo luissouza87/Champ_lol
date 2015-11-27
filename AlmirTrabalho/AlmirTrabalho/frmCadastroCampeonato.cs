@@ -46,14 +46,14 @@ namespace AlmirTrabalho
         {
             Camadas.MODEL.campeonato Campeonato = new Camadas.MODEL.campeonato();
             Camadas.DAL.campeonato dalCamp = new Camadas.DAL.campeonato();
-           // Campeonato.id = Convert.ToInt32(lblmenos.Text);
             Campeonato.local = txtLocal.Text;
             Campeonato.nome = txtNome.Text;
             Campeonato.premiacao = txtPremiacao.Text;
             Campeonato.capacidade = Convert.ToInt32(txtCapacidade.Text);
 
-            dalCamp.Insert(Campeonato);//inseri as informacoes digitadas no banco
-            dgvCadasCamp.DataSource = dalCamp.Select();//mostrar banco 
+            dalCamp.Insert(Campeonato);
+            dgvCadasCamp.DataSource = dalCamp.Select();
+
             habilitaCampos(false);
             btcadastar.Visible = false;
             btnCanC.Visible = false;

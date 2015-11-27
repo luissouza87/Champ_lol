@@ -30,7 +30,7 @@ namespace AlmirTrabalho
             Times.nome = txtNome.Text;
             Times.criador = txtCriador.Text;
             Times.pais = txtPais.Text;
-            Times.qt_jogadores = Convert.ToInt32("5");
+            Times.qt_jogadores = Convert.ToInt32(lblMax.Text);
 
             dalTimes.Insert(Times);//inseri as informacoes digitadas no banco
             dgvCadasTimes.DataSource = dalTimes.Select();//mostrar banco 

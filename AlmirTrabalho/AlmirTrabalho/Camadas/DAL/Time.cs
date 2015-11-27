@@ -16,7 +16,7 @@ namespace AlmirTrabalho.Camadas.DAL
         {
             List<MODEL.time> listaTime = new List<MODEL.time>();
             SqlConnection conexao = new SqlConnection(strCon);
-            string sql = "Select * from time;";
+            string sql = "Select * from TIME;";
             SqlCommand cmd = new SqlCommand(sql, conexao);
             conexao.Open();
             try
@@ -62,7 +62,7 @@ namespace AlmirTrabalho.Camadas.DAL
                     Time.nome = (reader["nome"].ToString());
                     Time.criador = (reader["criador"].ToString());
                     Time.pais = (reader["pais"].ToString());
-                    Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
+                    //Time.qt_jogadores = Convert.ToInt32(reader["qt_jogadores"].ToString());
                     listaTime.Add(Time);
                 }
             }

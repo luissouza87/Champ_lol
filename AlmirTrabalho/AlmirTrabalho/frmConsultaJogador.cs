@@ -12,6 +12,7 @@ namespace AlmirTrabalho
 {
     public partial class frmConsultaJogador : Form
     {
+
         public frmConsultaJogador()
         {
             InitializeComponent();
@@ -32,6 +33,11 @@ namespace AlmirTrabalho
         private void frmConsultaJogador_Load(object sender, EventArgs e)
         {
             setVisible(false, "");
+
+            rdbTodos.Checked = true;
+
+            Camadas.DAL.Jogador dalJogador = new Camadas.DAL.Jogador();
+            dgvConsulJogador.DataSource = dalJogador.Select();
         }
 
         private void rdbTodos_CheckedChanged(object sender, EventArgs e)
@@ -42,11 +48,17 @@ namespace AlmirTrabalho
         private void rdbNome_CheckedChanged(object sender, EventArgs e)
         {
             setVisible(true, "Insira o Nome: ");
+            txbPesquisa.Text = "";
         }
 
         private void rdbNick_CheckedChanged(object sender, EventArgs e)
         {
             setVisible(true, "Insira o NickName: ");
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

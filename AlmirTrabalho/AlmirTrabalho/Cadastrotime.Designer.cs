@@ -40,6 +40,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvCadasTimes = new System.Windows.Forms.DataGridView();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.lblMax = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCadasTimes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,7 +119,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(106, 161);
+            this.button1.Location = new System.Drawing.Point(107, 196);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -128,7 +130,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(209, 161);
+            this.button2.Location = new System.Drawing.Point(210, 196);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 9;
@@ -138,7 +140,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(312, 161);
+            this.button3.Location = new System.Drawing.Point(313, 196);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 10;
@@ -149,16 +151,38 @@
             // dgvCadasTimes
             // 
             this.dgvCadasTimes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCadasTimes.Location = new System.Drawing.Point(12, 205);
+            this.dgvCadasTimes.Location = new System.Drawing.Point(12, 225);
             this.dgvCadasTimes.Name = "dgvCadasTimes";
-            this.dgvCadasTimes.Size = new System.Drawing.Size(381, 117);
+            this.dgvCadasTimes.Size = new System.Drawing.Size(381, 97);
             this.dgvCadasTimes.TabIndex = 11;
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.Location = new System.Drawing.Point(12, 143);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(192, 27);
+            this.lblQuantidade.TabIndex = 12;
+            this.lblQuantidade.Text = "Max. Integrantes :";
+            // 
+            // lblMax
+            // 
+            this.lblMax.AutoSize = true;
+            this.lblMax.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMax.Location = new System.Drawing.Point(210, 143);
+            this.lblMax.Name = "lblMax";
+            this.lblMax.Size = new System.Drawing.Size(24, 27);
+            this.lblMax.TabIndex = 13;
+            this.lblMax.Text = "5";
             // 
             // frmCadastrotime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 334);
+            this.Controls.Add(this.lblMax);
+            this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.dgvCadasTimes);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -194,5 +218,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dgvCadasTimes;
+        private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.Label lblMax;
     }
 }

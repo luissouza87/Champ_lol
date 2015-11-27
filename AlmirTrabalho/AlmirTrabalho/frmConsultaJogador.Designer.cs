@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvConsulJogador = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.gpbPesquisa = new System.Windows.Forms.GroupBox();
             this.rdbNick = new System.Windows.Forms.RadioButton();
@@ -37,17 +37,17 @@
             this.lblPesquisa = new System.Windows.Forms.Label();
             this.txbPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulJogador)).BeginInit();
             this.gpbPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvConsulJogador
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(523, 186);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvConsulJogador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsulJogador.Location = new System.Drawing.Point(32, 122);
+            this.dgvConsulJogador.Name = "dgvConsulJogador";
+            this.dgvConsulJogador.Size = new System.Drawing.Size(523, 186);
+            this.dgvConsulJogador.TabIndex = 0;
             // 
             // button1
             // 
@@ -131,6 +131,7 @@
             this.btnPesquisa.TabIndex = 5;
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // frmConsultaJogador
             // 
@@ -143,11 +144,11 @@
             this.Controls.Add(this.lblPesquisa);
             this.Controls.Add(this.gpbPesquisa);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvConsulJogador);
             this.Name = "frmConsultaJogador";
             this.Text = "Consulta de Jogador";
             this.Load += new System.EventHandler(this.frmConsultaJogador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsulJogador)).EndInit();
             this.gpbPesquisa.ResumeLayout(false);
             this.gpbPesquisa.PerformLayout();
             this.ResumeLayout(false);
@@ -157,7 +158,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvConsulJogador;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox gpbPesquisa;
         private System.Windows.Forms.RadioButton rdbNick;
