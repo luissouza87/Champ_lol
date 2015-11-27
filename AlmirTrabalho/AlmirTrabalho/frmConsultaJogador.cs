@@ -16,10 +16,37 @@ namespace AlmirTrabalho
         {
             InitializeComponent();
         }
+        private void setVisible(bool status, string nN)
+        {
+            lblPesquisa.Visible = status;
+            txbPesquisa.Visible = status;
+            btnPesquisa.Visible = status;
+            lblPesquisa.Text = nN;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmConsultaJogador_Load(object sender, EventArgs e)
+        {
+            setVisible(false, "");
+        }
+
+        private void rdbTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            setVisible(false, "");
+        }
+
+        private void rdbNome_CheckedChanged(object sender, EventArgs e)
+        {
+            setVisible(true, "Insira o Nome: ");
+        }
+
+        private void rdbNick_CheckedChanged(object sender, EventArgs e)
+        {
+            setVisible(true, "Insira o NickName: ");
         }
     }
 }
