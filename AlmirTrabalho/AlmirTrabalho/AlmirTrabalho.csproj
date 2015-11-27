@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastrotime.cs">
+    <Compile Include="frmCadastrotime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastrotime.Designer.cs">
-      <DependentUpon>Cadastrotime.cs</DependentUpon>
+    <Compile Include="frmCadastrotime.Designer.cs">
+      <DependentUpon>frmCadastrotime.cs</DependentUpon>
     </Compile>
     <Compile Include="Camadas\BLL\campeonato.cs" />
     <Compile Include="Camadas\BLL\jogador.cs" />
@@ -89,8 +89,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastrotime.resx">
-      <DependentUpon>Cadastrotime.cs</DependentUpon>
+    <EmbeddedResource Include="frmCadastrotime.resx">
+      <DependentUpon>frmCadastrotime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroCampeonato.resx">
       <DependentUpon>frmCadastroCampeonato.cs</DependentUpon>
